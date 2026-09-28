@@ -145,6 +145,55 @@ function pct(int $aciertos, int $total): float
 }
 
 /**
+ * Condicion SQL: solo rondas de personas que pusieron su nombre.
+ * Las rondas anonimas no salen ni en el ranking ni en el historial.
+ *
+ * @param string $alias Alias de la tabla en la consulta ('s' por defecto).
+ */
+function solo_con_nombre(string $alias = 's'): string
+{
+    return sprintf('%s.alias IS NOT NULL AND %s.alias <> ""', $alias, $alias);
+}
+
+/**
+ * Identidad del jugador: un token aleatorio por navegador (sesion PHP).
+ * Cada persona que juega desde un equipo distinto tiene el suyo, asi que
+ * varias rondas pueden estar abiertas a la vez sin pisarse.
+ */
+function jugador_token(): string
+{
+    arrancar_sesion();
+    if (empty($_SESSION['jugador']) || !is_string($_SESSION['jugador'])) {
+        $_SESSION['jugador'] = bin2hex(random_bytes(16));
+    }
+    return (string) $_SESSION['jugador'];
+}
+
+/**
+ * ¿Esta ronda pertenece al navegador actual?
+ * Las rondas anteriores a esta version (sin jugador) no son de nadie.
+ */
+function es_mia(?array $sesion): bool
+{
+    if ($sesion === null || ($sesion['jugador'] ?? null) === null || $sesion['jugador'] === '') {
+        return false;
+    }
+    return hash_equals((string) $sesion['jugador'], jugador_token());
+}
+
+/**
+ * Filtro SQL de "rondas de este navegador" para los listados personales.
+ * Tambien incluye las rondas antiguas (sin jugador) para no perder el historial;
+ * NO sirve para repartir permisos: para eso usa es_mia().
+ *
+ * @param string $columna Columna que guarda el token del jugador.
+ */
+function filtro_jugador(string $columna = 's.jugador'): string
+{
+    return sprintf('(%s = ? OR %s IS NULL)', $columna, $columna);
+}
+
+/**
  * Normaliza el nombre opcional para el ranking.
  * Devuelve [alias, error]. alias es null cuando se quiere jugar anonimo.
  */

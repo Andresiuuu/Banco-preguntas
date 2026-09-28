@@ -31,6 +31,10 @@ try {
         $pdo->rollBack();
         json_out(['ok' => false, 'error' => 'La ronda no existe'], 404);
     }
+    if (!es_mia($sesion)) {
+        $pdo->rollBack();
+        json_out(['ok' => false, 'error' => 'Esta ronda no es tuya'], 403);
+    }
     if ($sesion['estado'] !== 'jugando') {
         $pdo->rollBack();
         json_out(['ok' => false, 'error' => 'La ronda ya está cerrada'], 409);

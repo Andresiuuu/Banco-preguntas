@@ -50,12 +50,30 @@ echo "==> Esquema verificado/creado\n";
 $migraciones = [
     'alias' => 'ALTER TABLE sesiones ADD COLUMN alias VARCHAR(24) NULL AFTER area_id',
     'semilla' => 'ALTER TABLE sesiones ADD COLUMN semilla INT UNSIGNED NOT NULL DEFAULT 0 AFTER alias',
+    'jugador' => 'ALTER TABLE sesiones ADD COLUMN jugador CHAR(32) NULL AFTER semilla',
 ];
 foreach ($migraciones as $columna => $ddl) {
     if (!$pdo->query("SHOW COLUMNS FROM sesiones LIKE '$columna'")->fetch()) {
         $pdo->exec($ddl);
         echo "==> Columna sesiones.$columna anadida\n";
     }
+}
+
+// Rondas abiertas de versiones antiguas (sin jugador asignado): se cierran
+// para que nadie pueda "heredar" una ronda que no empezó él.
+$pendientes = (int) $pdo->query(
+    'SELECT COUNT(*) FROM sesiones WHERE estado = "jugando" AND jugador IS NULL'
+)->fetchColumn();
+if ($pendientes > 0) {
+    $pdo->exec(
+        'UPDATE sesiones s
+            SET s.estado = "finalizada",
+                s.finalizada_at = NOW(),
+                s.respondidas = (SELECT COUNT(*) FROM respuestas r WHERE r.sesion_id = s.id),
+                s.aciertos = (SELECT COUNT(*) FROM respuestas r WHERE r.sesion_id = s.id AND r.correcta = 1)
+          WHERE s.estado = "jugando" AND s.jugador IS NULL'
+    );
+    echo "==> $pendientes rondas antiguas sin dueño cerradas\n";
 }
 
 // ---------------------------------------------------------------

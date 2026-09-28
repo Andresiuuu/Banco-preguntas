@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `sesiones` (
   `area_id`       TINYINT UNSIGNED NULL,
   `alias`         VARCHAR(24) NULL,
   `semilla`       INT UNSIGNED NOT NULL DEFAULT 0,
+  `jugador`       CHAR(32) NULL,
   `total`         SMALLINT UNSIGNED NOT NULL,
   `posicion`      SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `respondidas`   SMALLINT UNSIGNED NOT NULL DEFAULT 0,

@@ -15,19 +15,40 @@ $areas = $pdo->query(
       GROUP BY a.id, a.nombre ORDER BY a.id'
 )->fetchAll();
 
-$sesionActiva = $pdo->query(
-    "SELECT * FROM sesiones WHERE estado = 'jugando' ORDER BY id DESC LIMIT 1"
-)->fetch();
+$miJugador = jugador_token();
 
-$ultima = $pdo->query(
-    "SELECT * FROM sesiones WHERE estado = 'finalizada' ORDER BY id DESC LIMIT 1"
-)->fetch();
+// Cada navegador ve SOLO su ronda en curso (varios jugan a la vez).
+$st = $pdo->prepare(
+    "SELECT * FROM sesiones WHERE estado = 'jugando' AND jugador = ? ORDER BY id DESC LIMIT 1"
+);
+$st->execute([$miJugador]);
+$sesionActiva = $st->fetch();
 
-$estadistica = [
-    'sesiones' => (int) $pdo->query("SELECT COUNT(*) FROM sesiones WHERE estado = 'finalizada'")->fetchColumn(),
-    'respondidas' => (int) $pdo->query('SELECT COUNT(*) FROM respuestas')->fetchColumn(),
-    'fallos' => (int) $pdo->query('SELECT COUNT(*) FROM respuestas WHERE correcta = 0')->fetchColumn(),
-];
+$miAlias = trim((string) ($_SESSION['alias'] ?? ''));
+
+$ultima = null;
+if ($miAlias !== '') {
+    $st = $pdo->prepare(
+        "SELECT * FROM sesiones WHERE estado = 'finalizada' AND alias = ? ORDER BY id DESC LIMIT 1"
+    );
+    $st->execute([$miAlias]);
+    $ultima = $st->fetch();
+} else {
+    $st = $pdo->prepare(
+        "SELECT * FROM sesiones WHERE estado = 'finalizada' AND " . filtro_jugador('jugador') . " ORDER BY id DESC LIMIT 1"
+    );
+    $st->execute([$miJugador]);
+    $ultima = $st->fetch();
+}
+
+// Resumen de ESTE jugador: no se mezclan los datos de los demás.
+$st = $pdo->prepare(
+    'SELECT (SELECT COUNT(*) FROM sesiones WHERE estado = "finalizada" AND ' . filtro_jugador('jugador') . ') AS sesiones,
+            (SELECT COUNT(*) FROM respuestas r JOIN sesiones s ON s.id = r.sesion_id WHERE ' . filtro_jugador() . ') AS respondidas,
+            (SELECT COUNT(*) FROM respuestas r JOIN sesiones s ON s.id = r.sesion_id WHERE ' . filtro_jugador() . ' AND r.correcta = 0) AS fallos'
+);
+$st->execute([$miJugador, $miJugador, $miJugador]);
+$estadistica = $st->fetch();
 
 $titulo = 'Inicio';
 require __DIR__ . '/vistas/header.php';
@@ -124,7 +145,8 @@ require __DIR__ . '/vistas/header.php';
                placeholder="Déjalo vacío para jugar anónimo"
                value="<?= e($_SESSION['alias'] ?? '') ?>"
                autocomplete="nickname">
-        <small class="ayuda">Si lo pones, tu nota aparecerá con ese nombre en la página de Ranking.</small>
+        <small class="ayuda">Con nombre, tu nota aparecerá en el Ranking y en el Historial de
+          resultados. Si lo dejas vacío, la ronda solo la verás tú (estadísticas y detalle).</small>
       </label>
 
       <button class="btn btn-primario btn-ancho" type="submit">Empezar ronda</button>
@@ -134,7 +156,7 @@ require __DIR__ . '/vistas/header.php';
   </section>
 
   <section class="tarjeta">
-    <h2>Último resultado</h2>
+    <h2>Último resultado<?= $miAlias !== '' ? ' de ' . e($miAlias) : '' ?></h2>
     <?php if ($ultima): ?>
       <?php $nota = (int) $ultima['aciertos']; $tot = (int) $ultima['total']; ?>
       <div class="nota-grande">
@@ -147,12 +169,14 @@ require __DIR__ . '/vistas/header.php';
         <li><span>Fallos</span><strong><?= $tot - $nota ?></strong></li>
       </ul>
       <a class="btn btn-secundario btn-ancho" href="detalle.php?id=<?= (int) $ultima['id'] ?>">Ver en qué fallé</a>
+    <?php elseif ($miAlias === ''): ?>
+      <p class="vacio">Empieza una ronda y aquí verás tu último resultado.</p>
     <?php else: ?>
-      <p class="vacio">Aún no has terminado ninguna ronda. Empieza una y aquí aparecerá tu nota.</p>
+      <p class="vacio">Aún no hay ninguna ronda de «<?= e($miAlias) ?>». Juega una con ese nombre y aquí aparecerá tu nota.</p>
     <?php endif; ?>
 
     <hr class="separador">
-    <a class="enlace-block" href="resultados.php">Historial completo de rondas →</a>
+    <a class="enlace-block" href="resultados.php">Historial de mis rondas por nombre →</a>
     <a class="enlace-block" href="estadisticas.php">Estadísticas por área y preguntas débiles →</a>
     <a class="enlace-block" href="ranking.php">Ranking de notas →</a>
   </section>

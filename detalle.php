@@ -21,6 +21,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         http_response_code(403);
         exit('Token de seguridad no válido.');
     }
+    // Solo el dueño de la ronda puede publicar o cambiar su nombre.
+    if ($sesion['jugador'] !== null && !es_mia($sesion)) {
+        http_response_code(403);
+        exit('Esa ronda pertenece a otro jugador de este equipo.');
+    }
 
     $nuevoAlias = null;
     if (!isset($_POST['quitar'])) {

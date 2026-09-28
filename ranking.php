@@ -9,12 +9,12 @@ if (!isset(MODOS[$modo])) {
     $modo = '';
 }
 $areaId = (int) ($_GET['area'] ?? 0);
-$conNombre = ($_GET['con_nombre'] ?? '') === '1';
 
 $sql = 'SELECT s.id, s.modo, s.alias, s.total, s.aciertos, s.iniciada_at, s.finalizada_at, a.nombre AS area
           FROM sesiones s
           LEFT JOIN areas a ON a.id = s.area_id
-         WHERE s.estado = "finalizada" AND s.total > 0';
+         WHERE s.estado = "finalizada" AND s.total > 0
+           AND ' . solo_con_nombre() . ' ';
 $params = [];
 
 if ($modo !== '') {
@@ -24,9 +24,6 @@ if ($modo !== '') {
 if ($areaId > 0) {
     $sql .= ' AND s.area_id = ?';
     $params[] = $areaId;
-}
-if ($conNombre) {
-    $sql .= ' AND s.alias IS NOT NULL AND s.alias <> ""';
 }
 
 $sql .= ' ORDER BY (s.aciertos / s.total) DESC,
@@ -41,15 +38,16 @@ $filas = $st->fetchAll();
 $areas = $pdo->query('SELECT id, nombre FROM areas ORDER BY id')->fetchAll();
 
 $global = $pdo->query(
-    'SELECT COUNT(*) AS rondas,
-            SUM(CASE WHEN alias IS NOT NULL AND alias <> "" THEN 1 ELSE 0 END) AS con_nombre
-       FROM sesiones WHERE estado = "finalizada" AND total > 0'
+    'SELECT SUM(CASE WHEN ' . solo_con_nombre() . ' THEN 1 ELSE 0 END) AS con_nombre,
+            SUM(CASE WHEN NOT (' . solo_con_nombre() . ') THEN 1 ELSE 0 END) AS anonimas
+       FROM sesiones s WHERE s.estado = "finalizada" AND s.total > 0'
 )->fetch();
 
 $mejor = $pdo->query(
-    'SELECT ROUND(100 * aciertos / total, 1) AS p
-       FROM sesiones WHERE estado = "finalizada" AND total > 0
-      ORDER BY p DESC, total DESC LIMIT 1'
+    'SELECT ROUND(100 * s.aciertos / s.total, 1) AS p
+       FROM sesiones s WHERE s.estado = "finalizada" AND s.total > 0
+         AND ' . solo_con_nombre() . '
+      ORDER BY p DESC, s.total DESC LIMIT 1'
 )->fetchColumn();
 
 $titulo = 'Ranking';
@@ -58,22 +56,22 @@ require __DIR__ . '/vistas/header.php';
 
 <section class="hero hero-corto">
   <h1>Ranking de notas</h1>
-  <p>Ordenado por porcentaje de aciertos. Poner nombre es opcional: si lo dejas
-     vacío tu ronda aparece como «Anónimo».</p>
+  <p>Ordenado por porcentaje de aciertos. Aquí solo entran las rondas de quienes
+     pusieron su nombre: las anónimas no se muestran.</p>
 </section>
 
 <div class="rejilla-3">
   <div class="tarjeta tarjeta-mini">
     <span class="mini-num"><?= $mejor !== false && $mejor !== null ? e((string) $mejor) : '—' ?>%</span>
-    <span class="mini-lbl">mejor nota</span>
-  </div>
-  <div class="tarjeta tarjeta-mini">
-    <span class="mini-num"><?= (int) ($global['rondas'] ?? 0) ?></span>
-    <span class="mini-lbl">rondas en el ranking</span>
+    <span class="mini-lbl">mejor nota con nombre</span>
   </div>
   <div class="tarjeta tarjeta-mini">
     <span class="mini-num"><?= (int) ($global['con_nombre'] ?? 0) ?></span>
-    <span class="mini-lbl">con nombre</span>
+    <span class="mini-lbl">rondas en el ranking</span>
+  </div>
+  <div class="tarjeta tarjeta-mini">
+    <span class="mini-num"><?= (int) ($global['anonimas'] ?? 0) ?></span>
+    <span class="mini-lbl">anónimas (ocultas)</span>
   </div>
 </div>
 
@@ -106,16 +104,11 @@ require __DIR__ . '/vistas/header.php';
       </select>
     </label>
 
-    <label class="check check-filtro">
-      <input type="checkbox" name="con_nombre" value="1" <?= $conNombre ? 'checked' : '' ?>>
-      <span>Solo con nombre</span>
-    </label>
-
     <button class="btn btn-secundario" type="submit">Filtrar</button>
   </form>
 
   <?php if ($filas === []): ?>
-    <p class="vacio">No hay rondas finalizadas con esos filtros. <a href="index.php">Juega una ronda</a>.</p>
+    <p class="vacio">Nadie ha jugado todavía con nombre. <a href="index.php">Escribe el tuyo y juega una ronda</a>.</p>
   <?php else: ?>
     <div class="tabla-envoltura">
       <table class="tabla tabla-ranking">
@@ -142,13 +135,7 @@ require __DIR__ . '/vistas/header.php';
               <td class="celda-puesto">
                 <span class="puesto puesto-<?= $puesto <= 3 ? $puesto : 'n' ?>"><?= $puesto ?></span>
               </td>
-              <td>
-                <?php if ($f['alias']): ?>
-                  <strong><?= e($f['alias']) ?></strong>
-                <?php else: ?>
-                  <span class="alias-anonimo">Anónimo</span>
-                <?php endif; ?>
-              </td>
+              <td><strong><?= e($f['alias']) ?></strong></td>
               <td class="celda-nota"><?= $aci ?>/<?= $tot ?></td>
               <td>
                 <span class="mini-barra"><span style="width:<?= $p ?>%"></span></span>
@@ -163,7 +150,8 @@ require __DIR__ . '/vistas/header.php';
         </tbody>
       </table>
     </div>
-    <p class="nota">Se muestran las 50 mejores rondas con los filtros actuales.</p>
+    <p class="nota">Se muestran las 50 mejores rondas con nombre y con los filtros actuales.
+       Las rondas anónimas quedan fuera de la clasificación.</p>
   <?php endif; ?>
 </section>
 

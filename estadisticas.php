@@ -4,39 +4,63 @@ arrancar_sesion();
 
 $pdo = db();
 
-$totales = $pdo->query(
-    'SELECT (SELECT COUNT(*) FROM preguntas) AS preguntas,
-            (SELECT COUNT(*) FROM sesiones WHERE estado = "finalizada") AS rondas,
-            (SELECT COUNT(*) FROM respuestas) AS respondidas,
-            (SELECT COALESCE(SUM(correcta), 0) FROM respuestas) AS aciertos,
-            (SELECT COUNT(DISTINCT pregunta_id) FROM respuestas) AS distintas,
-            (SELECT COUNT(*) FROM preguntas WHERE veces_fallada > 0) AS con_fallos'
-)->fetch();
+// Estadisticas PERSONALES: solo las rondas de este navegador.
+$miJugador = jugador_token();
 
-$areas = $pdo->query(
+$st = $pdo->prepare(
+    'SELECT (SELECT COUNT(*) FROM preguntas) AS preguntas,
+            (SELECT COUNT(*) FROM sesiones WHERE estado = "finalizada" AND ' . filtro_jugador('jugador') . ') AS rondas,
+            (SELECT COUNT(*) FROM respuestas r
+               JOIN sesiones s ON s.id = r.sesion_id WHERE ' . filtro_jugador() . ') AS respondidas,
+            (SELECT COALESCE(SUM(r.correcta), 0) FROM respuestas r
+               JOIN sesiones s ON s.id = r.sesion_id WHERE ' . filtro_jugador() . ') AS aciertos,
+            (SELECT COUNT(DISTINCT r.pregunta_id) FROM respuestas r
+               JOIN sesiones s ON s.id = r.sesion_id WHERE ' . filtro_jugador() . ') AS distintas,
+            (SELECT COUNT(*) FROM preguntas p WHERE p.id IN (
+                SELECT DISTINCT r.pregunta_id FROM respuestas r
+                  JOIN sesiones s ON s.id = r.sesion_id
+                 WHERE ' . filtro_jugador() . ' AND r.correcta = 0)) AS con_fallos'
+);
+$st->execute([$miJugador, $miJugador, $miJugador, $miJugador, $miJugador]);
+$totales = $st->fetch();
+
+$st = $pdo->prepare(
     'SELECT a.id, a.nombre, COUNT(r.id) AS vistas, COALESCE(SUM(r.correcta), 0) AS aciertos
        FROM areas a
        LEFT JOIN preguntas p ON p.area_id = a.id
        LEFT JOIN respuestas r ON r.pregunta_id = p.id
+                            AND r.sesion_id IN (SELECT id FROM sesiones WHERE ' . filtro_jugador('jugador') . ')
       GROUP BY a.id, a.nombre
       ORDER BY a.id'
-)->fetchAll();
+);
+$st->execute([$miJugador]);
+$areas = $st->fetchAll();
 
-$topFalladas = $pdo->query(
-    'SELECT p.numero, p.enunciado, p.veces_vista, p.veces_fallada, a.nombre AS area
-       FROM preguntas p JOIN areas a ON a.id = p.area_id
-      WHERE p.veces_fallada > 0
-      ORDER BY p.veces_fallada DESC, p.veces_vista DESC
+$st = $pdo->prepare(
+    'SELECT p.numero, p.enunciado, a.nombre AS area,
+            COUNT(r.id) AS veces_vista,
+            SUM(CASE WHEN r.correcta = 0 THEN 1 ELSE 0 END) AS veces_fallada
+       FROM respuestas r
+       JOIN sesiones s ON s.id = r.sesion_id AND ' . filtro_jugador() . '
+       JOIN preguntas p ON p.id = r.pregunta_id
+       JOIN areas a ON a.id = p.area_id
+      GROUP BY p.id, p.numero, p.enunciado, a.nombre
+     HAVING veces_fallada > 0
+      ORDER BY veces_fallada DESC, veces_vista DESC
       LIMIT 15'
-)->fetchAll();
+);
+$st->execute([$miJugador]);
+$topFalladas = $st->fetchAll();
 
-$evolucion = $pdo->query(
+$st = $pdo->prepare(
     'SELECT id, modo, aciertos, total, finalizada_at
        FROM sesiones
-      WHERE estado = "finalizada" AND total > 0
+      WHERE estado = "finalizada" AND total > 0 AND ' . filtro_jugador('jugador') . '
       ORDER BY id DESC
       LIMIT 12'
-)->fetchAll();
+);
+$st->execute([$miJugador]);
+$evolucion = $st->fetchAll();
 $evolucion = array_reverse($evolucion);
 
 $titulo = 'Estadísticas';
@@ -47,7 +71,8 @@ $aciertoGlobal = pct((int) $totales['aciertos'], (int) $totales['respondidas']);
 
 <section class="hero hero-corto">
   <h1>Dónde estoy flojo</h1>
-  <p>Dominio por área, preguntas que más se te resisten y tu evolución ronda a ronda.</p>
+  <p>Dominio por área, preguntas que más se te resisten y tu evolución ronda a ronda.
+     Solo se cuentan tus rondas: cada jugador ve sus propios datos.</p>
 </section>
 
 <div class="rejilla-3">

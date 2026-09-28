@@ -31,8 +31,11 @@ $_SESSION['alias'] = (string) $alias;
 
 $pdo = db();
 
-// Al empezar una ronda nueva, la anterior (si quedó a medias) se cierra.
-$previa = $pdo->query("SELECT id FROM sesiones WHERE estado = 'jugando' ORDER BY id DESC LIMIT 1")->fetch();
+// Al empezar una ronda nueva, solo se cierra la anterior DE ESTE navegador.
+// Las rondas de los demás jugadores siguen abiertas: cada uno juega a su vez.
+$st = $pdo->prepare("SELECT id FROM sesiones WHERE estado = 'jugando' AND jugador = ?");
+$st->execute([jugador_token()]);
+$previa = $st->fetch();
 if ($previa) {
     finalizar_sesion((int) $previa['id']);
 }
@@ -49,7 +52,14 @@ if ($areaId > 0) {
 }
 
 if ($modo === 'errores') {
-    $sql .= ' AND p.veces_fallada > 0';
+    // Solo preguntas falladas POR ESTE jugador (no las de los demás).
+    $sql .= ' AND p.id IN (
+                SELECT r.pregunta_id
+                  FROM respuestas r
+                  JOIN sesiones s ON s.id = r.sesion_id
+                 WHERE r.correcta = 0 AND ' . filtro_jugador() . '
+              )';
+    $params[] = jugador_token();
     // Muestreo ponderado: cuanto más veces fallada, más probabilidad de salir.
     $sql .= ' ORDER BY POW(RAND(), 1 / p.veces_fallada) DESC';
 } else {
@@ -70,13 +80,14 @@ if ($filas === []) {
 $cola = array_map('intval', array_column($filas, 'id'));
 
 $pdo->prepare(
-    'INSERT INTO sesiones (modo, area_id, alias, semilla, total, posicion, respondidas, aciertos, estado, cola, iniciada_at)
-     VALUES (?, ?, ?, ?, ?, 0, 0, 0, "jugando", ?, NOW())'
+    'INSERT INTO sesiones (modo, area_id, alias, semilla, jugador, total, posicion, respondidas, aciertos, estado, cola, iniciada_at)
+     VALUES (?, ?, ?, ?, ?, ?, 0, 0, 0, "jugando", ?, NOW())'
 )->execute([
     $modo,
     $areaId > 0 ? $areaId : null,
     $alias,
     random_int(1, 2147483647),
+    jugador_token(),
     count($cola),
     json_encode($cola),
 ]);

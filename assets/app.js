@@ -59,7 +59,8 @@
     if (aviso) {
       var textos = {
         'errores-vacios': 'Todavía no has fallado ninguna pregunta. Juega primero una ronda en modo Estudio o Examen.',
-        'sin-preguntas': 'No hay preguntas disponibles con esos filtros.'
+        'sin-preguntas': 'No hay preguntas disponibles con esos filtros.',
+        'ronda-ajena': 'Esa ronda la está jugando otro compañero en este equipo. Empieza la tuya aquí abajo.'
       };
       if (textos[aviso]) {
         var caja = document.createElement('div');

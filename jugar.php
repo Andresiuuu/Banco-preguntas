@@ -19,6 +19,12 @@ if (!$sesion) {
     exit;
 }
 
+// Una ronda en curso solo puede jugarla el navegador que la empezó.
+if ($sesion['estado'] === 'jugando' && !es_mia($sesion)) {
+    header('Location: index.php?aviso=ronda-ajena');
+    exit;
+}
+
 $_SESSION['sesion_id'] = $sesionId;
 
 if ($sesion['estado'] === 'finalizada') {

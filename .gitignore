@@ -1,5 +1,7 @@
 # Credenciales: nunca se versionan
 .env
+.env.*
+!.env.example
 
 # Artefactos de desarrollo
 .playwright-mcp/

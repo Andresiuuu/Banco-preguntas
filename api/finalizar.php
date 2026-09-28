@@ -14,10 +14,19 @@ if ($sesionId <= 0) {
     json_out(['ok' => false, 'error' => 'No hay ronda activa'], 404);
 }
 
-$sesion = finalizar_sesion($sesionId);
+$pdo = db();
+$st = $pdo->prepare('SELECT * FROM sesiones WHERE id = ?');
+$st->execute([$sesionId]);
+$sesion = $st->fetch();
+
 if (!$sesion) {
     json_out(['ok' => false, 'error' => 'La ronda no existe'], 404);
 }
+if (!es_mia($sesion)) {
+    json_out(['ok' => false, 'error' => 'Esta ronda no es tuya'], 403);
+}
+
+$sesion = finalizar_sesion($sesionId);
 
 json_out([
     'ok' => true,
