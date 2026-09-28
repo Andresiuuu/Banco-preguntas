@@ -1,0 +1,6 @@
+# Credenciales: nunca se versionan
+.env
+
+# Artefactos de desarrollo
+.playwright-mcp/
+*.log

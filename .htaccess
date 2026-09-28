@@ -1,0 +1,14 @@
+# Las credenciales nunca se sirven por HTTP.
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>
+
+# El banco de preguntas y el esquema SQL no son publicos.
+<FilesMatch "\.(sql|txt)$">
+    Require all denied
+</FilesMatch>
+
+# El importador solo funciona desde la linea de comandos.
+<FilesMatch "^importar\.php$">
+    Require all denied
+</FilesMatch>

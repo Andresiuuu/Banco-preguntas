@@ -1,0 +1,2470 @@
+BANCO DE 400 PREGUNTAS 
+EVALUACIÓN ACADÉMICA 
+Tecnología Superior en Desarrollo de Software 
+100 preguntas por área • Respuesta correcta marcada • Explicación breve 
+Documento ampliado a partir del cuestionario base de 120 preguntas. Se conservan sus cuatro áreas y se agregan 70 
+preguntas de práctica por cada área. 
+ÁREA 1: REDES DE COMPUTADORAS 
+100 preguntas de opción múltiple. Las preguntas 1–30 corresponden al cuestionario base; las preguntas 31–100 son 
+ampliaciones de práctica. 
+1. ¿Cuál es la función principal de la capa de Red en el modelo OSI? 
+a) Realizar el direccionamiento físico MAC 
+b) Determinar la mejor ruta para el envío de paquetes (enrutamiento)  ← RESPUESTA CORRECTA 
+c) Garantizar la entrega confiable y control de flujo punto a punto 
+d) Presentar los datos en un formato comprensible 
+Explicación: La capa de Red se encarga del direccionamiento lógico y el enrutamiento. 
+2. ¿Qué protocolo opera en la capa de transporte y ofrece un servicio orientado a conexión y confiable? 
+a) UDP 
+b) IP 
+c) TCP  ← RESPUESTA CORRECTA 
+d) ICMP 
+Explicación: TCP establece una conexión y controla la entrega confiable. 
+3. ¿Cuál es la máscara de red por defecto para una dirección IP Clase C (/24)? 
+a) 255.0.0.0 
+b) 255.255.0.0 
+c) 255.255.255.0  ← RESPUESTA CORRECTA 
+d) 255.255.255.255 
+Explicación: Una red /24 usa 24 bits para la red y 8 para hosts. 
+4. ¿Cuál de las siguientes direcciones corresponde a una IP privada según el RFC 1918? 
+a) 8.8.8.8 
+b) 172.16.0.5  ← RESPUESTA CORRECTA 
+c) 200.48.225.10 
+d) 169.254.1.1 
+Explicación: 172.16.0.0/12 pertenece al espacio privado RFC 1918. 
+5. ¿Qué comando se utiliza para verificar la conectividad mediante mensajes ICMP Echo Request? 
+a) ipconfig /all 
+b) traceroute 
+c) ping  ← RESPUESTA CORRECTA 
+d) netstat 
+Explicación: ping envía solicitudes ICMP Echo para comprobar conectividad. 
+6. ¿Qué puerto utiliza HTTPS por defecto? 
+a) 80 
+b) 21 
+c) 443  ← RESPUESTA CORRECTA 
+d) 22 
+Explicación: HTTPS utiliza normalmente el puerto TCP 443. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+7. ¿Qué protocolo resuelve una dirección IP a su dirección MAC en una red local? 
+a) DNS 
+b) DHCP 
+c) ARP  ← RESPUESTA CORRECTA 
+d) NAT 
+Explicación: ARP relaciona direcciones IPv4 con direcciones MAC. 
+8. ¿Cuál es la función principal de DHCP? 
+a) Traducir nombres de dominio 
+b) Asignar dinámicamente IP y configuración de red  ← RESPUESTA CORRECTA 
+c) Cifrar tráfico 
+d) Filtrar paquetes 
+Explicación: DHCP entrega parámetros como IP, máscara, gateway y DNS. 
+9. ¿Qué dispositivo opera principalmente en Capa 2 procesando tramas según MAC? 
+a) Hub 
+b) Switch  ← RESPUESTA CORRECTA 
+c) Router 
+d) Repetidor 
+Explicación: Un switch aprende MAC y reenvía tramas dentro de la LAN. 
+10. ¿Cuántos bits tiene una dirección IPv6? 
+a) 32 
+b) 64 
+c) 128  ← RESPUESTA CORRECTA 
+d) 256 
+Explicación: IPv6 utiliza direcciones de 128 bits. 
+11. ¿Qué arquitectura utiliza métodos HTTP como GET, POST, PUT y DELETE? 
+a) SOAP 
+b) REST API  ← RESPUESTA CORRECTA 
+c) FTP 
+d) Telnet 
+Explicación: REST usa métodos HTTP para operar sobre recursos. 
+12. ¿Qué mecanismo permite compartir una IP pública entre dispositivos privados? 
+a) VLAN 
+b) NAT  ← RESPUESTA CORRECTA 
+c) Subnetting 
+d) DNS 
+Explicación: NAT traduce direcciones privadas a públicas. 
+13. ¿Qué puerto usa habitualmente SSH? 
+a) 23 
+b) 22  ← RESPUESTA CORRECTA 
+c) 3389 
+d) 8080 
+Explicación: SSH utiliza por defecto el puerto TCP 22. 
+14. ¿Cuál es la principal diferencia entre TCP y UDP? 
+a) TCP es no orientado a conexión y UDP es orientado 
+b) TCP es orientado a conexión y confiable; UDP no garantiza entrega  ← RESPUESTA CORRECTA 
+c) TCP es Capa 3 y UDP Capa 7 
+d) No existen diferencias 
+Explicación: TCP prioriza confiabilidad; UDP reduce sobrecarga y no garantiza entrega. 
+15. ¿Qué registro DNS asocia un dominio con una dirección IPv4? 
+a) AAAA 
+b) MX 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) A  ← RESPUESTA CORRECTA 
+d) CNAME 
+Explicación: El registro A contiene una dirección IPv4. 
+16. ¿Qué estándar se conoce como Wi-Fi 6? 
+a) 802.11g 
+b) 802.11n 
+c) 802.11ac 
+d) 802.11ax  ← RESPUESTA CORRECTA 
+Explicación: IEEE 802.11ax es conocido comercialmente como Wi-Fi 6. 
+17. Con una máscara /26, ¿cuántas IP de host utilizables hay por subred? 
+a) 62  ← RESPUESTA CORRECTA 
+b) 64 
+c) 30 
+d) 126 
+Explicación: Una /26 tiene 64 direcciones; normalmente 62 son utilizables. 
+18. ¿Qué capa OSI gestiona cifrado, compresión y formato de datos? 
+a) Aplicación 
+b) Presentación  ← RESPUESTA CORRECTA 
+c) Sesión 
+d) Transporte 
+Explicación: La capa de Presentación trata formato, compresión y cifrado. 
+19. ¿Cuál es un protocolo de enrutamiento de vector distancia? 
+a) OSPF 
+b) BGP 
+c) RIP  ← RESPUESTA CORRECTA 
+d) IS-IS 
+Explicación: RIP utiliza el enfoque de vector distancia. 
+20. ¿Qué ventaja ofrece segmentar una red mediante VLAN? 
+a) Aumenta la velocidad física 
+b) Reduce dominios de broadcast y mejora la segmentación  ← RESPUESTA CORRECTA 
+c) Elimina IP 
+d) Permite conexiones inalámbricas 
+Explicación: Las VLAN separan lógicamente dominios de broadcast. 
+21. ¿Qué herramienta rastrea los saltos de un paquete hasta un destino? 
+a) nslookup 
+b) traceroute/tracert  ← RESPUESTA CORRECTA 
+c) ipconfig 
+d) netstat 
+Explicación: traceroute/tracert muestra los saltos intermedios. 
+22. ¿Qué tecnología inspecciona tráfico y bloquea paquetes no autorizados? 
+a) Proxy 
+b) Firewall  ← RESPUESTA CORRECTA 
+c) Switch L2 
+d) Gateway 
+Explicación: Un firewall aplica reglas para permitir o bloquear tráfico. 
+23. ¿Cuál es la velocidad teórica de 1000BASE-T? 
+a) 100 Mbps 
+b) 1000 Mbps  ← RESPUESTA CORRECTA 
+c) 10 Gbps 
+d) 10 Mbps 
+Explicación: 1000BASE-T corresponde a Gigabit Ethernet. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+24. En TCP/IP, ¿qué capa reúne principalmente Física y Enlace del modelo OSI? 
+a) Red 
+b) Acceso a la Red  ← RESPUESTA CORRECTA 
+c) Transporte 
+d) Aplicación 
+Explicación: El modelo TCP/IP agrupa funciones físicas y de enlace en acceso a red. 
+25. ¿Qué puerto usa DNS por defecto? 
+a) 53  ← RESPUESTA CORRECTA 
+b) 67 
+c) 110 
+d) 143 
+Explicación: DNS usa normalmente el puerto 53, UDP y también TCP en ciertos casos. 
+26. ¿Qué cableado de par trenzado incorpora blindaje contra interferencias? 
+a) UTP 
+b) STP/FTP  ← RESPUESTA CORRECTA 
+c) RG6 
+d) Fibra monomodo 
+Explicación: STP/FTP incorpora elementos de blindaje. 
+27. ¿Qué protocolo permite transferencia segura de archivos mediante SSH? 
+a) FTP 
+b) TFTP 
+c) SFTP  ← RESPUESTA CORRECTA 
+d) HTTP 
+Explicación: SFTP transfiere archivos mediante el canal seguro de SSH. 
+28. ¿Qué significa Full-Duplex? 
+a) Solo transmite una dirección 
+b) Transmite y recibe simultáneamente  ← RESPUESTA CORRECTA 
+c) Conecta solo dos equipos 
+d) Solo transmite analógico 
+Explicación: Full-Duplex permite comunicación simultánea en ambos sentidos. 
+29. ¿Cuál es el orden correcto de T568B? 
+a) Blanco-Naranja, Naranja, Blanco-Verde, Azul, Blanco-Azul, Verde, Blanco-Marrón, Marrón  ← RESPUESTA 
+CORRECTA 
+b) Blanco-Verde, Verde, Blanco-Naranja, Azul, Blanco-Azul, Naranja, Blanco-Marrón, Marrón 
+c) Marrón, Blanco-Marrón, Verde, Azul, Blanco-Azul, Naranja, Blanco-Naranja, Verde 
+d) Ninguna 
+Explicación: T568B comienza con blanco-naranja y naranja. 
+30. ¿Qué protocolo permite enviar correo desde un cliente hacia un servidor de salida? 
+a) POP3 
+b) IMAP 
+c) SMTP  ← RESPUESTA CORRECTA 
+d) SNMP 
+Explicación: SMTP se utiliza para el envío de correo electrónico. 
+31. ¿Qué capa OSI proporciona comunicación extremo a extremo? 
+a) Física 
+b) Transporte  ← RESPUESTA CORRECTA 
+c) Red 
+d) Presentación 
+Explicación: La capa de Transporte gestiona comunicación extremo a extremo. 
+32. ¿Qué protocolo traduce nombres de dominio a IP? 
+a) DNS  ← RESPUESTA CORRECTA 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+b) ARP 
+c) DHCP 
+d) FTP 
+Explicación: DNS resuelve nombres de dominio. 
+33. ¿Qué máscara corresponde a /25? 
+a) 255.255.255.0 
+b) 255.255.255.128  ← RESPUESTA CORRECTA 
+c) 255.255.255.192 
+d) 255.255.0.0 
+Explicación: /25 usa 25 bits de red y equivale a .128. 
+34. ¿Cuántas direcciones totales tiene una subred /30? 
+a) 2 
+b) 4  ← RESPUESTA CORRECTA 
+c) 8 
+d) 16 
+Explicación: Una /30 contiene 4 direcciones totales. 
+35. ¿Cuál es el rango privado 10.0.0.0? 
+a) 10.0.0.0/8  ← RESPUESTA CORRECTA 
+b) 127.0.0.0/8 
+c) 169.254.0.0/16 
+d) 224.0.0.0/4 
+Explicación: 10.0.0.0/8 es un rango privado RFC 1918. 
+36. ¿Qué dirección identifica a un equipo dentro de una red IP? 
+a) IP  ← RESPUESTA CORRECTA 
+b) MAC del switch 
+c) SSID 
+d) Puerto físico 
+Explicación: La dirección IP identifica lógicamente al host. 
+37. ¿Qué protocolo asigna automáticamente gateway y DNS? 
+a) ARP 
+b) DHCP  ← RESPUESTA CORRECTA 
+c) ICMP 
+d) SMTP 
+Explicación: DHCP puede entregar esos parámetros. 
+38. ¿Qué comando muestra configuración IP en Windows? 
+a) ipconfig  ← RESPUESTA CORRECTA 
+b) ping 
+c) tracert 
+d) nslookup 
+Explicación: ipconfig muestra configuración de interfaces. 
+39. ¿Qué comando consulta DNS desde consola? 
+a) nslookup  ← RESPUESTA CORRECTA 
+b) netstat 
+c) route 
+d) arp 
+Explicación: nslookup consulta servidores DNS. 
+40. ¿Qué protocolo usa Echo Request? 
+a) ICMP  ← RESPUESTA CORRECTA 
+b) TCP 
+c) UDP 
+d) ARP 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+Explicación: ICMP define mensajes de diagnóstico como Echo. 
+41. ¿Qué dispositivo conecta redes diferentes? 
+a) Switch 
+b) Router  ← RESPUESTA CORRECTA 
+c) Hub 
+d) Patch panel 
+Explicación: El router enruta entre redes. 
+42. ¿Qué dispositivo repite señales sin analizar MAC? 
+a) Router 
+b) Hub  ← RESPUESTA CORRECTA 
+c) Firewall 
+d) Switch L3 
+Explicación: Un hub repite señales hacia sus puertos. 
+43. ¿Qué es una dirección MAC? 
+a) Identificador de interfaz de red  ← RESPUESTA CORRECTA 
+b) Nombre DNS 
+c) Puerto TCP 
+d) Máscara 
+Explicación: MAC es un identificador de enlace asociado a una interfaz. 
+44. ¿Qué rango corresponde a loopback IPv4? 
+a) 127.0.0.0/8  ← RESPUESTA CORRECTA 
+b) 192.168.0.0/16 
+c) 172.16.0.0/12 
+d) 224.0.0.0/4 
+Explicación: 127.0.0.0/8 se usa para loopback. 
+45. ¿Qué dirección se usa para broadcast IPv4 en una subred? 
+a) Primera dirección 
+b) Última dirección  ← RESPUESTA CORRECTA 
+c) Dirección del gateway siempre 
+d) MAC 
+Explicación: La última dirección de una subred IPv4 suele ser el broadcast. 
+46. ¿Qué protocolo se usa para transferencia web sin cifrado? 
+a) HTTP  ← RESPUESTA CORRECTA 
+b) HTTPS 
+c) SSH 
+d) SFTP 
+Explicación: HTTP transporta contenido web sin cifrado TLS por defecto. 
+47. ¿Qué puerto usa HTTP normalmente? 
+a) 21 
+b) 22 
+c) 80  ← RESPUESTA CORRECTA 
+d) 443 
+Explicación: HTTP usa TCP 80 por defecto. 
+48. ¿Qué puerto usa FTP control? 
+a) 20 
+b) 21  ← RESPUESTA CORRECTA 
+c) 25 
+d) 53 
+Explicación: FTP utiliza normalmente TCP 21 para control. 
+49. ¿Qué protocolo recupera correo manteniéndolo en el servidor y sincronizado? 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+a) IMAP  ← RESPUESTA CORRECTA 
+b) SMTP 
+c) ARP 
+d) SNMP 
+Explicación: IMAP sincroniza mensajes entre cliente y servidor. 
+50. ¿Qué protocolo descarga correo tradicionalmente al cliente? 
+a) POP3  ← RESPUESTA CORRECTA 
+b) SMTP 
+c) DNS 
+d) SSH 
+Explicación: POP3 está diseñado principalmente para recepción/descarga. 
+51. ¿Qué puerto usa SMTP de envío tradicional? 
+a) 25  ← RESPUESTA CORRECTA 
+b) 53 
+c) 110 
+d) 143 
+Explicación: SMTP usa tradicionalmente TCP 25 entre servidores. 
+52. ¿Qué puerto usa RDP por defecto? 
+a) 22 
+b) 80 
+c) 3389  ← RESPUESTA CORRECTA 
+d) 8080 
+Explicación: RDP utiliza normalmente TCP/UDP 3389. 
+53. ¿Qué tecnología separa redes lógicamente en un switch? 
+a) VLAN  ← RESPUESTA CORRECTA 
+b) NAT 
+c) DNS 
+d) VPN 
+Explicación: VLAN crea segmentos lógicos independientes. 
+54. ¿Qué protocolo permite una VPN segura basada en túneles IPsec? 
+a) IPsec  ← RESPUESTA CORRECTA 
+b) ARP 
+c) FTP 
+d) DHCP 
+Explicación: IPsec proporciona mecanismos de autenticación y cifrado IP. 
+55. ¿Qué significa SSID? 
+a) Nombre de la red inalámbrica  ← RESPUESTA CORRECTA 
+b) Clave MAC 
+c) Puerto de router 
+d) Tipo de cable 
+Explicación: SSID identifica una red Wi-Fi. 
+56. ¿Qué banda Wi-Fi suele tener mayor alcance y mejor penetración? 
+a) 2.4 GHz  ← RESPUESTA CORRECTA 
+b) 5 GHz 
+c) 6 GHz 
+d) 60 GHz 
+Explicación: 2.4 GHz generalmente ofrece mayor alcance, aunque depende del entorno. 
+57. ¿Qué banda suele ofrecer más canales y menor congestión doméstica? 
+a) 2.4 GHz 
+b) 5 GHz  ← RESPUESTA CORRECTA 
+c) AM 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+d) FM 
+Explicación: 5 GHz ofrece más canales y capacidad, con menor alcance que 2.4 GHz. 
+58. ¿Qué significa latencia? 
+a) Tiempo que tarda un dato en viajar  ← RESPUESTA CORRECTA 
+b) Cantidad de cables 
+c) Capacidad del disco 
+d) Número de usuarios 
+Explicación: La latencia mide el retraso de comunicación. 
+59. ¿Qué mide el ancho de banda? 
+a) Capacidad de transmisión  ← RESPUESTA CORRECTA 
+b) Temperatura 
+c) Latencia solamente 
+d) Direcciones MAC 
+Explicación: Ancho de banda representa capacidad de transferencia. 
+60. ¿Qué es jitter? 
+a) Variación del retardo  ← RESPUESTA CORRECTA 
+b) Pérdida de contraseña 
+c) Cambio de IP 
+d) Tipo de cable 
+Explicación: Jitter es la variación temporal de la latencia. 
+61. ¿Qué ocurre con un paquete cuando un router no conoce su ruta? 
+a) Lo enruta siempre 
+b) Puede descartarlo o usar ruta por defecto  ← RESPUESTA CORRECTA 
+c) Lo convierte en MAC 
+d) Lo cifra 
+Explicación: Sin ruta válida puede descartarse o seguir una ruta por defecto. 
+62. ¿Qué tabla usa un router para decidir el siguiente salto? 
+a) Tabla de enrutamiento  ← RESPUESTA CORRECTA 
+b) Tabla ARP solamente 
+c) Tabla DNS 
+d) Tabla DHCP 
+Explicación: La tabla de enrutamiento contiene redes y próximos saltos. 
+63. ¿Qué protocolo de enrutamiento usa estado de enlace? 
+a) RIP 
+b) OSPF  ← RESPUESTA CORRECTA 
+c) ARP 
+d) DHCP 
+Explicación: OSPF es un protocolo de estado de enlace. 
+64. ¿Qué métrica usa RIP principalmente? 
+a) Saltos  ← RESPUESTA CORRECTA 
+b) Ancho de pantalla 
+c) MAC 
+d) Puertos 
+Explicación: RIP usa número de saltos como métrica. 
+65. ¿Qué protocolo se utiliza para obtener MAC de un IPv4? 
+a) ARP  ← RESPUESTA CORRECTA 
+b) DNS 
+c) NTP 
+d) HTTP 
+Explicación: ARP resuelve IPv4 a MAC en redes locales. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+66. ¿Qué protocolo sincroniza la hora de equipos? 
+a) NTP  ← RESPUESTA CORRECTA 
+b) FTP 
+c) ARP 
+d) SMTP 
+Explicación: NTP sincroniza relojes mediante servidores de tiempo. 
+67. ¿Qué es una subred? 
+a) División lógica de una red IP  ← RESPUESTA CORRECTA 
+b) Un tipo de cable 
+c) Una aplicación 
+d) Un firewall 
+Explicación: Subnetting divide una red en redes más pequeñas. 
+68. ¿Qué notación representa una máscara como /24? 
+a) CIDR  ← RESPUESTA CORRECTA 
+b) MAC 
+c) SSID 
+d) DNS 
+Explicación: CIDR expresa el prefijo de red mediante /n. 
+69. ¿Qué ventaja tiene IPv6 sobre IPv4? 
+a) Más espacio de direcciones  ← RESPUESTA CORRECTA 
+b) Menos bits 
+c) No usa IP 
+d) Solo funciona en LAN 
+Explicación: IPv6 amplía enormemente el espacio de direcciones. 
+70. ¿Qué dirección IPv6 es de loopback? 
+a) ::1  ← RESPUESTA CORRECTA 
+b) :: 
+c) fe80::1 
+d) ff02::1 
+Explicación: ::1 es la dirección de loopback IPv6. 
+71. ¿Qué prefijo IPv6 se usa para link-local? 
+a) fe80::/10  ← RESPUESTA CORRECTA 
+b) 2000::/3 
+c) fc00::/7 
+d) ::1/128 
+Explicación: fe80::/10 identifica direcciones link-local. 
+72. ¿Qué rango IPv6 se usa para direcciones privadas/únicas locales? 
+a) fc00::/7  ← RESPUESTA CORRECTA 
+b) fe80::/10 
+c) ::1 
+d) ff00::/8 
+Explicación: fc00::/7 corresponde a Unique Local Addresses. 
+73. ¿Qué protocolo de seguridad reemplazó a WEP en redes Wi-Fi modernas? 
+a) WPA/WPA2/WPA3  ← RESPUESTA CORRECTA 
+b) FTP 
+c) ARP 
+d) Telnet 
+Explicación: WPA2 y WPA3 son opciones modernas de seguridad Wi-Fi. 
+74. ¿Qué problema tiene Telnet frente a SSH? 
+a) No cifra la sesión  ← RESPUESTA CORRECTA 
+b) No usa IP 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) No permite comandos 
+d) Solo funciona en Wi-Fi 
+Explicación: Telnet transmite credenciales y datos sin cifrado seguro. 
+75. ¿Qué puerto usa Telnet por defecto? 
+a) 21 
+b) 22 
+c) 23  ← RESPUESTA CORRECTA 
+d) 25 
+Explicación: Telnet usa TCP 23. 
+76. ¿Qué protocolo permite acceso remoto seguro por terminal? 
+a) SSH  ← RESPUESTA CORRECTA 
+b) HTTP 
+c) FTP 
+d) POP3 
+Explicación: SSH cifra la sesión remota. 
+77. ¿Qué es un proxy? 
+a) Intermediario entre cliente y destino  ← RESPUESTA CORRECTA 
+b) Disco de red 
+c) Cable 
+d) Protocolo de correo 
+Explicación: Un proxy recibe y reenvía solicitudes. 
+78. ¿Qué es un gateway predeterminado? 
+a) Equipo que permite salir de la red local  ← RESPUESTA CORRECTA 
+b) Servidor DNS únicamente 
+c) MAC del host 
+d) Switch de capa 2 
+Explicación: El gateway suele ser el router hacia otras redes. 
+79. ¿Qué máscara tiene una red /16? 
+a) 255.255.0.0  ← RESPUESTA CORRECTA 
+b) 255.255.255.0 
+c) 255.0.0.0 
+d) 255.255.255.128 
+Explicación: /16 corresponde a 255.255.0.0. 
+80. ¿Qué máscara tiene /28? 
+a) 255.255.255.240  ← RESPUESTA CORRECTA 
+b) 255.255.255.192 
+c) 255.255.255.224 
+d) 255.255.255.248 
+Explicación: /28 deja 4 bits de host: 240 en el último octeto. 
+81. ¿Cuántos hosts utilizables tiene /28 en IPv4 tradicional? 
+a) 14  ← RESPUESTA CORRECTA 
+b) 16 
+c) 30 
+d) 62 
+Explicación: 16 direcciones totales menos red y broadcast = 14. 
+82. ¿Qué comando muestra la ruta de paquetes en Windows? 
+a) tracert  ← RESPUESTA CORRECTA 
+b) ipconfig 
+c) arp 
+d) hostname 
+Explicación: tracert muestra los saltos hacia un destino. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+83. ¿Qué comando muestra la tabla ARP? 
+a) arp -a  ← RESPUESTA CORRECTA 
+b) ipconfig 
+c) route 
+d) ping 
+Explicación: arp -a muestra entradas ARP conocidas. 
+84. ¿Qué comando muestra rutas en Windows? 
+a) route print  ← RESPUESTA CORRECTA 
+b) nslookup 
+c) hostname 
+d) net use 
+Explicación: route print muestra la tabla de rutas. 
+85. ¿Qué servicio convierte un dominio en IP? 
+a) DNS  ← RESPUESTA CORRECTA 
+b) DHCP 
+c) NAT 
+d) NTP 
+Explicación: DNS realiza resolución de nombres. 
+86. ¿Qué tipo de DNS contiene registros A y MX? 
+a) Zona DNS  ← RESPUESTA CORRECTA 
+b) Tabla MAC 
+c) VLAN 
+d) ACL 
+Explicación: Una zona DNS contiene registros de recursos. 
+87. ¿Qué registro DNS identifica servidores de correo? 
+a) MX  ← RESPUESTA CORRECTA 
+b) A 
+c) AAAA 
+d) TXT 
+Explicación: MX especifica servidores responsables del correo. 
+88. ¿Qué registro DNS apunta un alias a otro nombre? 
+a) CNAME  ← RESPUESTA CORRECTA 
+b) MX 
+c) PTR 
+d) NS 
+Explicación: CNAME crea un alias de nombre. 
+89. ¿Qué registro DNS se usa para IPv6? 
+a) AAAA  ← RESPUESTA CORRECTA 
+b) A 
+c) MX 
+d) TXT 
+Explicación: AAAA asocia un nombre con una dirección IPv6. 
+90. ¿Qué es una ACL de red? 
+a) Lista de reglas de control de acceso  ← RESPUESTA CORRECTA 
+b) Cable 
+c) IP pública 
+d) Servidor DNS 
+Explicación: Una ACL permite o deniega tráfico según criterios. 
+91. ¿Qué técnica limita el acceso de un puerto de switch a ciertas MAC? 
+a) Port security  ← RESPUESTA CORRECTA 
+b) NAT 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) DNSSEC 
+d) DHCP 
+Explicación: Port security controla qué dispositivos pueden usar el puerto. 
+92. ¿Qué es PoE? 
+a) Energía eléctrica por Ethernet  ← RESPUESTA CORRECTA 
+b) Protocolo DNS 
+c) Cifrado 
+d) Tipo de fibra 
+Explicación: Power over Ethernet entrega energía y datos por cable Ethernet. 
+93. ¿Qué medio es inmune a interferencia electromagnética? 
+a) Fibra óptica  ← RESPUESTA CORRECTA 
+b) UTP 
+c) Coaxial 
+d) STP 
+Explicación: La fibra transmite mediante luz y no sufre EMI como el cobre. 
+94. ¿Qué fibra suele usarse para largas distancias? 
+a) Monomodo  ← RESPUESTA CORRECTA 
+b) Multimodo siempre 
+c) UTP 
+d) Coaxial 
+Explicación: La fibra monomodo soporta largas distancias. 
+95. ¿Qué conector es común en fibra óptica? 
+a) LC  ← RESPUESTA CORRECTA 
+b) RJ45 
+c) USB-A 
+d) VGA 
+Explicación: LC es un conector común de fibra. 
+96. ¿Qué categoría de cable es común para Gigabit Ethernet? 
+a) Cat5e  ← RESPUESTA CORRECTA 
+b) Cat1 
+c) Cat2 
+d) Cat3 
+Explicación: Cat5e soporta Gigabit Ethernet en condiciones adecuadas. 
+97. ¿Qué significa MTU? 
+a) Maximum Transmission Unit  ← RESPUESTA CORRECTA 
+b) Media Transfer User 
+c) Main TCP Unit 
+d) MAC Transfer Utility 
+Explicación: MTU es el tamaño máximo de paquete/trama IP permitido por un enlace. 
+98. ¿Qué problema puede causar un MTU inadecuado? 
+a) Fragmentación o pérdida de paquetes  ← RESPUESTA CORRECTA 
+b) Más RAM 
+c) Cambio de MAC 
+d) Mayor voltaje 
+Explicación: Un MTU incompatible puede provocar fragmentación o problemas de transmisión. 
+99. ¿Qué es una tormenta de broadcast? 
+a) Exceso de tráfico broadcast  ← RESPUESTA CORRECTA 
+b) Fallo de DNS 
+c) Pérdida de energía 
+d) Cambio de contraseña 
+Explicación: Una tormenta satura la red con tráfico broadcast excesivo. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+100. ¿Qué protocolo evita bucles en redes Ethernet conmutadas? 
+a) STP  ← RESPUESTA CORRECTA 
+b) FTP 
+c) SMTP 
+d) POP3 
+Explicación: Spanning Tree Protocol evita bucles de Capa 2. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+ÁREA 2: BASE DE DATOS 
+100 preguntas de opción múltiple. Las preguntas 1–30 corresponden al cuestionario base; las preguntas 31–100 son 
+ampliaciones de práctica. 
+1. ¿Qué comando pertenece a DDL? 
+a) SELECT 
+b) INSERT 
+c) CREATE  ← RESPUESTA CORRECTA 
+d) UPDATE 
+Explicación: CREATE define objetos de la base de datos. 
+2. ¿Qué cláusula filtra grupos formados mediante GROUP BY? 
+a) WHERE 
+b) HAVING  ← RESPUESTA CORRECTA 
+c) ORDER BY 
+d) LIKE 
+Explicación: HAVING filtra resultados después de agrupar. 
+3. ¿Qué concepto exige que una clave foránea corresponda a una clave existente? 
+a) Integridad de entidad 
+b) Integridad referencial  ← RESPUESTA CORRECTA 
+c) Normalización 
+d) Atomicidad 
+Explicación: La integridad referencial mantiene relaciones válidas. 
+4. ¿Qué JOIN devuelve todas las filas de la tabla izquierda y las coincidencias de la derecha? 
+a) INNER JOIN 
+b) LEFT JOIN  ← RESPUESTA CORRECTA 
+c) RIGHT JOIN 
+d) FULL OUTER JOIN 
+Explicación: LEFT JOIN conserva todas las filas de la izquierda. 
+5. ¿Cuál es un SGBD NoSQL orientado a documentos? 
+a) PostgreSQL 
+b) MySQL 
+c) MongoDB  ← RESPUESTA CORRECTA 
+d) Oracle 
+Explicación: MongoDB almacena documentos BSON/JSON. 
+6. En ACID, ¿qué significa Atomicidad? 
+a) Consistencia permanente 
+b) Todo o nada en una transacción  ← RESPUESTA CORRECTA 
+c) Aislamiento 
+d) Persistencia 
+Explicación: Una transacción atómica se aplica completa o no se aplica. 
+7. ¿Qué comando elimina todos los registros sin eliminar la tabla? 
+a) DELETE FROM 
+b) DROP TABLE 
+c) TRUNCATE TABLE  ← RESPUESTA CORRECTA 
+d) REMOVE TABLE 
+Explicación: TRUNCATE vacía la tabla conservando su estructura. 
+8. ¿Qué forma normal elimina dependencias parciales de una clave compuesta? 
+a) 1FN 
+b) 2FN  ← RESPUESTA CORRECTA 
+c) 3FN 
+d) BCNF 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+Explicación: La 2FN elimina dependencias parciales. 
+9. ¿Qué objeto se ejecuta automáticamente ante INSERT, UPDATE o DELETE? 
+a) Procedimiento 
+b) Vista 
+c) Trigger  ← RESPUESTA CORRECTA 
+d) Índice 
+Explicación: Un trigger responde automáticamente a eventos definidos. 
+10. ¿Cuál es el propósito principal de un índice? 
+a) Evitar duplicados siempre 
+b) Acelerar búsquedas  ← RESPUESTA CORRECTA 
+c) Aumentar seguridad 
+d) Reducir espacio 
+Explicación: Los índices pueden acelerar consultas a cambio de almacenamiento y mantenimiento. 
+11. ¿Qué sentencia agrega una columna a una tabla existente? 
+a) UPDATE TABLE 
+b) ALTER TABLE  ← RESPUESTA CORRECTA 
+c) MODIFY TABLE 
+d) CHANGE TABLE 
+Explicación: ALTER TABLE modifica la estructura de una tabla. 
+12. ¿Qué valor representa ausencia o desconocimiento de un dato? 
+a) 0 
+b) '' 
+c) NULL  ← RESPUESTA CORRECTA 
+d) FALSE 
+Explicación: NULL representa ausencia de valor, no cero ni cadena vacía. 
+13. ¿Qué operador permite búsquedas con % y _? 
+a) IN 
+b) BETWEEN 
+c) LIKE  ← RESPUESTA CORRECTA 
+d) EXISTS 
+Explicación: LIKE permite patrones con comodines. 
+14. ¿Qué sentencia confirma permanentemente una transacción? 
+a) ROLLBACK 
+b) SAVEPOINT 
+c) COMMIT  ← RESPUESTA CORRECTA 
+d) END TRANSACTION 
+Explicación: COMMIT confirma los cambios de la transacción. 
+15. ¿Cuál es una función de agregación? 
+a) CONCAT() 
+b) AVG()  ← RESPUESTA CORRECTA 
+c) SUBSTRING() 
+d) UPPER() 
+Explicación: AVG calcula el promedio de un conjunto de valores. 
+16. ¿Qué hace SELECT DISTINCT cliente_id? 
+a) Ordena 
+b) Devuelve valores únicos  ← RESPUESTA CORRECTA 
+c) Filtra sin ventas 
+d) Cuenta registros 
+Explicación: DISTINCT elimina duplicados del resultado. 
+17. ¿Cómo se implementa una relación N:M? 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+a) FK en una sola tabla 
+b) Tabla intermedia con ambas claves  ← RESPUESTA CORRECTA 
+c) No es posible 
+d) Una sola tabla 
+Explicación: Una tabla asociativa representa la relación muchos a muchos. 
+18. ¿Qué diferencia principal existe entre función y procedimiento almacenado? 
+a) Funciones no reciben parámetros 
+b) La función debe retornar un valor; el procedimiento puede no hacerlo  ← RESPUESTA CORRECTA 
+c) Procedimientos solo existen en SQLite 
+d) No hay diferencia 
+Explicación: La función está diseñada para producir un valor retornable. 
+19. ¿Qué restricción garantiza valores distintos? 
+a) CHECK 
+b) NOT NULL 
+c) UNIQUE  ← RESPUESTA CORRECTA 
+d) DEFAULT 
+Explicación: UNIQUE evita duplicados en la columna o conjunto definido. 
+20. ¿Qué lenguaje SQL gestiona permisos con GRANT y REVOKE? 
+a) DDL 
+b) DML 
+c) DCL  ← RESPUESTA CORRECTA 
+d) TCL 
+Explicación: DCL controla privilegios de acceso. 
+21. ¿Qué significa CAP? 
+a) Consistencia, Disponibilidad y Tolerancia al Particionado  ← RESPUESTA CORRECTA 
+b) Concurrencia, Alta disponibilidad y Performance 
+c) Control, Almacenamiento y Procesamiento 
+d) Cifrado, Autenticación y Protección 
+Explicación: CAP describe tres propiedades de sistemas distribuidos. 
+22. ¿Qué es una VIEW? 
+a) Copia física 
+b) Tabla virtual basada en una consulta  ← RESPUESTA CORRECTA 
+c) Índice 
+d) Clave primaria 
+Explicación: Una vista presenta resultados de una consulta como objeto lógico. 
+23. ¿Qué función puede sustituir NULL por un valor alternativo? 
+a) COALESCE()  ← RESPUESTA CORRECTA 
+b) REPLACE() 
+c) NULLIF() 
+d) CONVERT() 
+Explicación: COALESCE devuelve el primer valor no NULL. 
+24. ¿Cómo se representa una entidad débil en E-R? 
+a) Rectángulo simple 
+b) Rectángulo doble  ← RESPUESTA CORRECTA 
+c) Elipse punteada 
+d) Rombo simple 
+Explicación: La notación clásica usa un rectángulo doble. 
+25. ¿Qué comando deshace operaciones no confirmadas? 
+a) COMMIT 
+b) ROLLBACK  ← RESPUESTA CORRECTA 
+c) REVERT 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+d) UNDO 
+Explicación: ROLLBACK revierte cambios de la transacción actual. 
+26. En MongoDB, ¿qué equivale a una fila relacional? 
+a) Colección 
+b) Campo 
+c) Documento  ← RESPUESTA CORRECTA 
+d) Clave 
+Explicación: Cada documento representa una unidad de datos similar a un registro. 
+27. ¿Qué índice evita claves duplicadas? 
+a) Clustered 
+b) Unique  ← RESPUESTA CORRECTA 
+c) Compuesto 
+d) Full-Text 
+Explicación: Un índice UNIQUE impide duplicados en sus claves. 
+28. ¿Qué subconsulta devuelve verdadero si devuelve uno o más registros? 
+a) IN 
+b) EXISTS  ← RESPUESTA CORRECTA 
+c) ANY 
+d) ALL 
+Explicación: EXISTS comprueba la existencia de resultados. 
+29. ¿Qué técnica divide datos entre varios servidores? 
+a) Normalización 
+b) Sharding  ← RESPUESTA CORRECTA 
+c) Indexación 
+d) Replicación 
+Explicación: Sharding distribuye horizontalmente datos entre nodos. 
+30. ¿Cuál es la sintaxis correcta para cambiar una edad? 
+a) MODIFY estudiantes SET 
+b) UPDATE estudiantes SET edad=20 WHERE id=1  ← RESPUESTA CORRECTA 
+c) CHANGE estudiantes SET 
+d) REPLACE INTO 
+Explicación: UPDATE modifica registros existentes con la condición indicada. 
+31. ¿Qué comando consulta datos? 
+a) SELECT  ← RESPUESTA CORRECTA 
+b) CREATE 
+c) DROP 
+d) ALTER 
+Explicación: SELECT recupera datos. 
+32. ¿Qué comando inserta un registro? 
+a) INSERT  ← RESPUESTA CORRECTA 
+b) UPDATE 
+c) SELECT 
+d) ALTER 
+Explicación: INSERT agrega filas. 
+33. ¿Qué comando elimina registros según una condición? 
+a) DELETE  ← RESPUESTA CORRECTA 
+b) DROP 
+c) CREATE 
+d) GRANT 
+Explicación: DELETE elimina filas que cumplen una condición. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+34. ¿Qué comando elimina una tabla completa? 
+a) DROP TABLE  ← RESPUESTA CORRECTA 
+b) DELETE ROW 
+c) REMOVE 
+d) TRUNCATE DATABASE 
+Explicación: DROP TABLE elimina estructura y datos. 
+35. ¿Qué comando modifica datos existentes? 
+a) UPDATE  ← RESPUESTA CORRECTA 
+b) ALTER 
+c) CREATE 
+d) SELECT 
+Explicación: UPDATE modifica valores de filas. 
+36. ¿Qué cláusula ordena resultados? 
+a) ORDER BY  ← RESPUESTA CORRECTA 
+b) GROUP BY 
+c) HAVING 
+d) WHERE 
+Explicación: ORDER BY ordena el conjunto resultante. 
+37. ¿Qué cláusula agrupa filas? 
+a) GROUP BY  ← RESPUESTA CORRECTA 
+b) ORDER BY 
+c) WHERE 
+d) LIMIT 
+Explicación: GROUP BY crea grupos para agregaciones. 
+38. ¿Qué palabra limita el número de filas en MySQL? 
+a) LIMIT  ← RESPUESTA CORRECTA 
+b) STOP 
+c) TOPONLY 
+d) ROWS 
+Explicación: LIMIT restringe la cantidad de filas devueltas. 
+39. ¿Qué operador combina condiciones donde ambas deben cumplirse? 
+a) AND  ← RESPUESTA CORRECTA 
+b) OR 
+c) NOT 
+d) XOR 
+Explicación: AND requiere que ambas condiciones sean verdaderas. 
+40. ¿Qué operador acepta cualquiera de varias condiciones? 
+a) OR  ← RESPUESTA CORRECTA 
+b) AND 
+c) NOT 
+d) BETWEEN 
+Explicación: OR es verdadero cuando al menos una condición se cumple. 
+41. ¿Qué operador niega una condición? 
+a) NOT  ← RESPUESTA CORRECTA 
+b) AND 
+c) OR 
+d) LIKE 
+Explicación: NOT invierte el resultado lógico. 
+42. ¿Qué operador verifica pertenencia a una lista? 
+a) IN  ← RESPUESTA CORRECTA 
+b) JOIN 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) LIKE 
+d) IS 
+Explicación: IN compara un valor con una lista de valores. 
+43. ¿Qué operador verifica un intervalo? 
+a) BETWEEN  ← RESPUESTA CORRECTA 
+b) LIKE 
+c) IN 
+d) EXISTS 
+Explicación: BETWEEN comprueba que el valor esté entre dos límites. 
+44. ¿Qué condición comprueba NULL? 
+a) IS NULL  ← RESPUESTA CORRECTA 
+b) = NULL 
+c) NULL = 
+d) CHECK NULL 
+Explicación: SQL usa IS NULL para comprobar valores nulos. 
+45. ¿Qué función cuenta filas? 
+a) COUNT()  ← RESPUESTA CORRECTA 
+b) SUM() 
+c) AVG() 
+d) ROUND() 
+Explicación: COUNT cuenta filas o valores según su expresión. 
+46. ¿Qué función suma valores? 
+a) SUM()  ← RESPUESTA CORRECTA 
+b) COUNT() 
+c) MIN() 
+d) UPPER() 
+Explicación: SUM calcula una suma. 
+47. ¿Qué función devuelve el valor mínimo? 
+a) MIN()  ← RESPUESTA CORRECTA 
+b) MAX() 
+c) AVG() 
+d) COUNT() 
+Explicación: MIN obtiene el menor valor. 
+48. ¿Qué función devuelve el máximo? 
+a) MAX()  ← RESPUESTA CORRECTA 
+b) MIN() 
+c) AVG() 
+d) SUM() 
+Explicación: MAX obtiene el mayor valor. 
+49. ¿Qué JOIN devuelve solo coincidencias? 
+a) INNER JOIN  ← RESPUESTA CORRECTA 
+b) LEFT JOIN 
+c) RIGHT JOIN 
+d) CROSS JOIN 
+Explicación: INNER JOIN conserva filas con coincidencia en ambas tablas. 
+50. ¿Qué JOIN conserva todas las filas de la derecha? 
+a) RIGHT JOIN  ← RESPUESTA CORRECTA 
+b) INNER JOIN 
+c) LEFT JOIN 
+d) CROSS JOIN 
+Explicación: RIGHT JOIN conserva todas las filas de la tabla derecha. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+51. ¿Qué JOIN produce combinaciones entre todas las filas? 
+a) CROSS JOIN  ← RESPUESTA CORRECTA 
+b) INNER JOIN 
+c) LEFT JOIN 
+d) SELF JOIN 
+Explicación: CROSS JOIN genera el producto cartesiano. 
+52. ¿Qué es una clave primaria? 
+a) Identificador único de una fila  ← RESPUESTA CORRECTA 
+b) Índice siempre secundario 
+c) Campo opcional 
+d) Vista 
+Explicación: La primary key identifica de forma única cada registro. 
+53. ¿Puede una clave primaria contener NULL? 
+a) No  ← RESPUESTA CORRECTA 
+b) Sí siempre 
+c) Solo en MySQL 
+d) Solo en NoSQL 
+Explicación: Una clave primaria debe identificar inequívocamente y no admite NULL. 
+54. ¿Qué es una clave foránea? 
+a) Referencia a una clave de otra tabla  ← RESPUESTA CORRECTA 
+b) Campo calculado 
+c) Índice de texto 
+d) Vista 
+Explicación: Una foreign key establece una relación entre tablas. 
+55. ¿Qué restricción evita valores NULL? 
+a) NOT NULL  ← RESPUESTA CORRECTA 
+b) UNIQUE 
+c) CHECK 
+d) DEFAULT 
+Explicación: NOT NULL exige un valor. 
+56. ¿Qué restricción valida una condición? 
+a) CHECK  ← RESPUESTA CORRECTA 
+b) DEFAULT 
+c) UNIQUE 
+d) INDEX 
+Explicación: CHECK permite definir una condición que deben cumplir los valores. 
+57. ¿Qué restricción asigna un valor si no se proporciona? 
+a) DEFAULT  ← RESPUESTA CORRECTA 
+b) CHECK 
+c) UNIQUE 
+d) PRIMARY 
+Explicación: DEFAULT establece un valor predeterminado. 
+58. ¿Qué es una clave compuesta? 
+a) Clave formada por varias columnas  ← RESPUESTA CORRECTA 
+b) Clave duplicada 
+c) Clave sin índice 
+d) Clave externa 
+Explicación: Combina dos o más columnas para identificar una fila. 
+59. ¿Qué busca la 1FN? 
+a) Valores atómicos y sin grupos repetitivos  ← RESPUESTA CORRECTA 
+b) Eliminar toda clave 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Crear índices 
+d) Distribuir servidores 
+Explicación: La primera forma normal exige valores atómicos. 
+60. ¿Qué busca la 3FN? 
+a) Eliminar dependencias transitivas  ← RESPUESTA CORRECTA 
+b) Eliminar claves primarias 
+c) Crear vistas 
+d) Duplicar tablas 
+Explicación: 3FN busca evitar dependencias transitivas no deseadas. 
+61. ¿Qué es desnormalización? 
+a) Introducir redundancia controlada por rendimiento  ← RESPUESTA CORRECTA 
+b) Eliminar todos los datos 
+c) Crear backups 
+d) Encriptar tablas 
+Explicación: La desnormalización puede mejorar consultas a cambio de redundancia. 
+62. ¿Qué propiedad ACID asegura persistencia? 
+a) Durabilidad  ← RESPUESTA CORRECTA 
+b) Atomicidad 
+c) Consistencia 
+d) Aislamiento 
+Explicación: Durabilidad mantiene los cambios confirmados frente a fallos. 
+63. ¿Qué propiedad ACID evita interferencias entre transacciones? 
+a) Aislamiento  ← RESPUESTA CORRECTA 
+b) Durabilidad 
+c) Atomicidad 
+d) Disponibilidad 
+Explicación: Isolation controla cómo interactúan transacciones concurrentes. 
+64. ¿Qué propiedad ACID mantiene reglas de integridad? 
+a) Consistencia  ← RESPUESTA CORRECTA 
+b) Atomicidad 
+c) Durabilidad 
+d) Aislamiento 
+Explicación: Consistency lleva la base de un estado válido a otro válido. 
+65. ¿Qué es una transacción? 
+a) Unidad lógica de operaciones que se confirma o revierte  ← RESPUESTA CORRECTA 
+b) Tabla 
+c) Índice 
+d) Consulta únicamente 
+Explicación: Una transacción agrupa operaciones relacionadas. 
+66. ¿Qué comando crea un punto dentro de una transacción? 
+a) SAVEPOINT  ← RESPUESTA CORRECTA 
+b) CHECKPOINT TABLE 
+c) POINT 
+d) MARK 
+Explicación: SAVEPOINT permite establecer un punto de retorno parcial. 
+67. ¿Qué es un deadlock? 
+a) Dos transacciones esperan recursos entre sí  ← RESPUESTA CORRECTA 
+b) Error de sintaxis 
+c) Tabla vacía 
+d) Backup 
+Explicación: Un interbloqueo ocurre cuando transacciones se bloquean mutuamente. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+68. ¿Qué es un índice compuesto? 
+a) Índice con varias columnas  ← RESPUESTA CORRECTA 
+b) Índice duplicado 
+c) Índice de una fila 
+d) Índice temporal 
+Explicación: Un índice compuesto utiliza más de una columna. 
+69. ¿Qué es una consulta preparada? 
+a) Consulta parametrizada que ayuda a evitar inyección SQL  ← RESPUESTA CORRECTA 
+b) Consulta sin SELECT 
+c) Vista 
+d) Backup 
+Explicación: Los parámetros separan datos de la estructura SQL. 
+70. ¿Qué ataque intenta insertar SQL malicioso en entradas? 
+a) SQL Injection  ← RESPUESTA CORRECTA 
+b) XSS 
+c) CSRF 
+d) Phishing 
+Explicación: SQL Injection manipula consultas mediante entradas no seguras. 
+71. ¿Qué práctica reduce SQL Injection? 
+a) Consultas parametrizadas  ← RESPUESTA CORRECTA 
+b) Concatenar strings 
+c) Desactivar índices 
+d) Usar GET siempre 
+Explicación: Los parámetros evitan interpretar entradas como código SQL. 
+72. ¿Qué es un backup completo? 
+a) Copia de todos los datos seleccionados  ← RESPUESTA CORRECTA 
+b) Solo cambios recientes 
+c) Solo índices 
+d) Solo usuarios 
+Explicación: Un backup completo contiene todo el conjunto respaldado. 
+73. ¿Qué backup contiene cambios desde un backup completo? 
+a) Incremental  ← RESPUESTA CORRECTA 
+b) Completo 
+c) Manual de esquema 
+d) Diferencial siempre 
+Explicación: El incremental guarda cambios desde el último backup. 
+74. ¿Qué backup diferencial contiene cambios desde el último completo? 
+a) Diferencial  ← RESPUESTA CORRECTA 
+b) Incremental 
+c) Espejo 
+d) Temporal 
+Explicación: El diferencial acumula cambios desde el último completo. 
+75. ¿Qué es replicación? 
+a) Mantener copias sincronizadas entre nodos  ← RESPUESTA CORRECTA 
+b) Normalizar 
+c) Crear índices 
+d) Borrar duplicados 
+Explicación: La replicación mantiene datos en más de un servidor. 
+76. ¿Qué es alta disponibilidad en BD? 
+a) Diseño para reducir interrupciones del servicio  ← RESPUESTA CORRECTA 
+b) Más columnas 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Mayor normalización 
+d) Solo backups 
+Explicación: Busca mantener el servicio disponible ante fallos. 
+77. ¿Qué es una consulta correlacionada? 
+a) Subconsulta que depende de la fila externa  ← RESPUESTA CORRECTA 
+b) Consulta sin WHERE 
+c) Vista materializada 
+d) Trigger 
+Explicación: La subconsulta referencia valores de la consulta externa. 
+78. ¿Qué es una vista materializada? 
+a) Resultado de consulta almacenado para reutilizarlo  ← RESPUESTA CORRECTA 
+b) Vista sin consulta 
+c) Tabla temporal obligatoria 
+d) Índice 
+Explicación: Una vista materializada almacena físicamente el resultado. 
+79. ¿Qué es un procedimiento almacenado? 
+a) Rutina SQL guardada en el servidor  ← RESPUESTA CORRECTA 
+b) Índice 
+c) Clave 
+d) Backup 
+Explicación: Es código SQL reutilizable almacenado en la BD. 
+80. ¿Qué es un trigger BEFORE INSERT? 
+a) Trigger ejecutado antes de insertar  ← RESPUESTA CORRECTA 
+b) Consulta SELECT 
+c) Índice 
+d) Vista 
+Explicación: Se ejecuta antes del evento INSERT. 
+81. ¿Qué es una restricción UNIQUE compuesta? 
+a) Evita duplicar combinaciones de columnas  ← RESPUESTA CORRECTA 
+b) Evita NULL siempre 
+c) Crea FK 
+d) Elimina filas 
+Explicación: La unicidad se aplica a la combinación definida. 
+82. ¿Qué representa una relación 1:N? 
+a) Una entidad puede relacionarse con muchas de otra entidad  ← RESPUESTA CORRECTA 
+b) Muchas a muchas 
+c) Una a una 
+d) Ninguna 
+Explicación: Es una relación de uno a muchos. 
+83. ¿Qué es cardinalidad? 
+a) Cantidad de ocurrencias relacionadas entre entidades  ← RESPUESTA CORRECTA 
+b) Tipo de índice 
+c) Tamaño de tabla 
+d) Longitud de SQL 
+Explicación: La cardinalidad describe cuántas instancias pueden relacionarse. 
+84. ¿Qué es una entidad en un modelo E-R? 
+a) Objeto o concepto del dominio  ← RESPUESTA CORRECTA 
+b) Consulta 
+c) Índice 
+d) Servidor 
+Explicación: Una entidad representa algo relevante del dominio. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+85. ¿Qué es un atributo? 
+a) Propiedad de una entidad  ← RESPUESTA CORRECTA 
+b) Tabla intermedia siempre 
+c) Consulta 
+d) Transacción 
+Explicación: Un atributo describe una característica de una entidad. 
+86. ¿Qué es un esquema de BD? 
+a) Estructura lógica que organiza objetos de la base  ← RESPUESTA CORRECTA 
+b) Backup 
+c) Usuario 
+d) Consulta 
+Explicación: El esquema define tablas, relaciones y otros objetos. 
+87. ¿Qué es un SGBD? 
+a) Software que administra bases de datos  ← RESPUESTA CORRECTA 
+b) Cable de red 
+c) Sistema operativo solamente 
+d) Lenguaje 
+Explicación: Un SGBD permite crear, consultar y administrar datos. 
+88. ¿Qué SGBD relacional es de código abierto? 
+a) PostgreSQL  ← RESPUESTA CORRECTA 
+b) MongoDB 
+c) Redis 
+d) Cassandra 
+Explicación: PostgreSQL es un sistema relacional open source. 
+89. ¿Qué tipo de BD es Redis principalmente? 
+a) Clave-valor en memoria  ← RESPUESTA CORRECTA 
+b) Relacional 
+c) Documental exclusivamente 
+d) Gráfica 
+Explicación: Redis es un almacén de estructuras clave-valor en memoria. 
+90. ¿Qué BD está orientada a grafos? 
+a) Neo4j  ← RESPUESTA CORRECTA 
+b) MySQL 
+c) SQLite 
+d) MariaDB 
+Explicación: Neo4j utiliza un modelo de nodos y relaciones. 
+91. ¿Qué formato usa MongoDB internamente para documentos? 
+a) BSON  ← RESPUESTA CORRECTA 
+b) CSV 
+c) TXT 
+d) HTML 
+Explicación: MongoDB almacena documentos en BSON. 
+92. ¿Qué comando SQL crea una base de datos? 
+a) CREATE DATABASE  ← RESPUESTA CORRECTA 
+b) MAKE DATABASE 
+c) NEW DB 
+d) BUILD DB 
+Explicación: CREATE DATABASE crea el contenedor de base. 
+93. ¿Qué comando elimina una base de datos? 
+a) DROP DATABASE  ← RESPUESTA CORRECTA 
+b) DELETE DATABASE 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) REMOVE DB 
+d) CLEAR DB 
+Explicación: DROP DATABASE elimina la base y sus objetos. 
+94. ¿Qué palabra evita insertar duplicados al seleccionar? 
+a) DISTINCT  ← RESPUESTA CORRECTA 
+b) UNIQUE SELECT 
+c) ONLY 
+d) SINGLE 
+Explicación: DISTINCT elimina duplicados del resultado. 
+95. ¿Qué operador concatena condiciones de forma exclusiva en SQL estándar? 
+a) OR  ← RESPUESTA CORRECTA 
+b) AND 
+c) NOT 
+d) IN 
+Explicación: OR permite que una de las condiciones sea verdadera. 
+96. ¿Qué función convierte texto a mayúsculas en SQL común? 
+a) UPPER()  ← RESPUESTA CORRECTA 
+b) LOWER() 
+c) CAPS() 
+d) TOUPPER() 
+Explicación: UPPER devuelve texto en mayúsculas. 
+97. ¿Qué función convierte texto a minúsculas? 
+a) LOWER()  ← RESPUESTA CORRECTA 
+b) UPPER() 
+c) SMALL() 
+d) LOWCASE() 
+Explicación: LOWER devuelve texto en minúsculas. 
+98. ¿Qué cláusula se usa después de GROUP BY para filtrar agregaciones? 
+a) HAVING  ← RESPUESTA CORRECTA 
+b) WHERE 
+c) ORDER 
+d) LIMIT 
+Explicación: HAVING filtra grupos ya agregados. 
+99. ¿Qué palabra da un alias a una columna? 
+a) AS  ← RESPUESTA CORRECTA 
+b) ALIAS 
+c) NAME 
+d) TO 
+Explicación: AS permite asignar alias legibles. 
+100. ¿Qué es una subconsulta? 
+a) Consulta dentro de otra consulta  ← RESPUESTA CORRECTA 
+b) Backup 
+c) Trigger 
+d) Índice 
+Explicación: Una subconsulta aparece dentro de otra sentencia SQL. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+ÁREA 3: PROGRAMACIÓN 
+100 preguntas de opción múltiple. Las preguntas 1–30 corresponden al cuestionario base; las preguntas 31–100 son 
+ampliaciones de práctica. 
+1. ¿Qué pilar de POO oculta detalles internos de implementación? 
+a) Herencia 
+b) Polimorfismo 
+c) Encapsulamiento  ← RESPUESTA CORRECTA 
+d) Abstracción 
+Explicación: El encapsulamiento controla el acceso al estado interno. 
+2. ¿Qué estructura usa LIFO? 
+a) Cola 
+b) Pila  ← RESPUESTA CORRECTA 
+c) Lista 
+d) Árbol 
+Explicación: LIFO significa último en entrar, primero en salir. 
+3. ¿Complejidad de búsqueda binaria en el peor caso? 
+a) O(1) 
+b) O(n) 
+c) O(log n)  ← RESPUESTA CORRECTA 
+d) O(n²) 
+Explicación: Cada paso reduce aproximadamente a la mitad el espacio de búsqueda. 
+4. ¿Qué palabra impide heredar una clase en Java/C#? 
+a) static 
+b) final/sealed  ← RESPUESTA CORRECTA 
+c) abstract 
+d) private 
+Explicación: final en Java y sealed en C# restringen herencia. 
+5. ¿Qué patrón creacional garantiza una sola instancia? 
+a) Factory Method 
+b) Singleton  ← RESPUESTA CORRECTA 
+c) Observer 
+d) Adapter 
+Explicación: Singleton restringe la instancia de una clase. 
+6. ¿Qué operador realiza AND con cortocircuito? 
+a) & 
+b) &&  ← RESPUESTA CORRECTA 
+c) | 
+d) || 
+Explicación: && evalúa el segundo operando solo cuando es necesario. 
+7. ¿Qué es polimorfismo? 
+a) Cambio dinámico de tipo 
+b) Distintas clases responden al mismo método de formas distintas  ← RESPUESTA CORRECTA 
+c) Copia de objeto 
+d) Importación 
+Explicación: Permite tratar objetos relacionados mediante una interfaz común. 
+8. ¿Diferencia entre overloading y overriding? 
+a) Son iguales 
+b) Overloading cambia firma; overriding redefine método heredado  ← RESPUESTA CORRECTA 
+c) Overriding solo variables 
+d) No existe 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+Explicación: La sobrecarga usa distintas firmas; la sobrescritura reemplaza comportamiento heredado. 
+9. ¿Qué estructura ofrece acceso promedio O(1) por clave? 
+a) Hash/diccionario  ← RESPUESTA CORRECTA 
+b) Lista 
+c) AVL 
+d) Grafo 
+Explicación: Una tabla hash permite acceso promedio constante bajo condiciones normales. 
+10. ¿Qué comando crea y cambia a una rama Git? 
+a) git branch nueva 
+b) git checkout -b nueva / git switch -c nueva  ← RESPUESTA CORRECTA 
+c) git commit -b 
+d) git merge 
+Explicación: Esos comandos crean la rama y cambian a ella. 
+11. ¿Qué es recursividad? 
+a) Bucle infinito 
+b) Función que se llama a sí misma para resolver subproblemas  ← RESPUESTA CORRECTA 
+c) Compilación 
+d) Variables globales 
+Explicación: Una función recursiva se invoca a sí misma con un caso base. 
+12. ¿Diferencia clave entre let y var en JavaScript? 
+a) let tiene ámbito de bloque; var de función  ← RESPUESTA CORRECTA 
+b) var es constante 
+c) let no almacena números 
+d) No hay diferencia 
+Explicación: let respeta el ámbito de bloque, mientras var tiene ámbito de función. 
+13. ¿Qué es autoboxing? 
+a) Casting manual 
+b) Conversión automática de primitivo a wrapper  ← RESPUESTA CORRECTA 
+c) Parsing 
+d) Serialización 
+Explicación: Autoboxing envuelve automáticamente un tipo primitivo. 
+14. En Python, ¿qué estructura mutable usa []? 
+a) Tupla 
+b) Diccionario 
+c) Lista  ← RESPUESTA CORRECTA 
+d) Set 
+Explicación: Los corchetes crean listas, que son mutables. 
+15. ¿Qué principio SOLID indica una sola razón para cambiar? 
+a) SRP  ← RESPUESTA CORRECTA 
+b) OCP 
+c) LSP 
+d) DIP 
+Explicación: Single Responsibility Principle busca una responsabilidad principal por clase. 
+16. ¿Qué excepción es típica al acceder a una referencia null en Java? 
+a) IndexOutOfBounds 
+b) NullPointerException  ← RESPUESTA CORRECTA 
+c) IllegalArgument 
+d) ClassCast 
+Explicación: NullPointerException ocurre al usar una referencia null. 
+17. ¿Qué algoritmo compara elementos adyacentes e intercambia si están desordenados? 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Bubble Sort  ← RESPUESTA CORRECTA 
+a) QuickSort 
+b) MergeSort 
+d) InsertionSort 
+Explicación: Bubble Sort compara elementos vecinos repetidamente. 
+18. ¿Qué paradigma trata el cálculo como evaluación de funciones? 
+a) POO 
+b) Funcional  ← RESPUESTA CORRECTA 
+c) Estructurada 
+d) Ensamblador 
+Explicación: La programación funcional se basa en funciones y evita estado mutable cuando es posible. 
+19. ¿Qué formato ligero se usa ampliamente para intercambio de datos web? 
+a) XML 
+b) JSON  ← RESPUESTA CORRECTA 
+c) CSV 
+d) YAML 
+Explicación: JSON es común en APIs web por su estructura y facilidad de procesamiento. 
+20. ¿Qué construcción captura excepciones? 
+a) try/catch  ← RESPUESTA CORRECTA 
+b) if/else 
+c) do/while 
+d) import/export 
+Explicación: try contiene código susceptible de fallar y catch maneja la excepción. 
+21. ¿Qué es una clase abstracta? 
+a) No instanciable directamente y base para otras clases  ← RESPUESTA CORRECTA 
+b) Sin métodos 
+c) Interfaz terminada 
+d) Se borra 
+Explicación: Puede definir comportamiento base y métodos abstractos. 
+22. ¿Qué operador permite acceso condicional seguro en JavaScript/C#? 
+a) ?? 
+b) ?.  ← RESPUESTA CORRECTA 
+c) !! 
+d) :: 
+Explicación: ?. evita intentar acceder a una propiedad cuando el objeto es null/undefined. 
+23. ¿Qué hace el Garbage Collector? 
+a) Limpia archivos 
+b) Libera memoria de objetos no utilizados  ← RESPUESTA CORRECTA 
+c) Corrige sintaxis 
+d) Cierra apps 
+Explicación: El recolector recupera memoria que ya no puede ser utilizada por el programa. 
+24. En un BST, los nodos de la izquierda son normalmente: 
+a) Mayores 
+b) Menores  ← RESPUESTA CORRECTA 
+c) Aleatorios 
+d) Sin regla 
+Explicación: La propiedad básica del BST coloca valores menores a la izquierda. 
+25. ¿Qué patrón separa Modelo, Vista y Controlador? 
+a) MVVM 
+b) MVC  ← RESPUESTA CORRECTA 
+c) Monolítico 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+d) Microservicios 
+Explicación: MVC divide responsabilidades entre modelo, vista y controlador. 
+26. ¿Qué aporta TypeScript sobre JavaScript? 
+a) Ejecutarse sin navegador 
+b) Tipado estático y comprobación en compilación  ← RESPUESTA CORRECTA 
+c) Reemplazar HTML/CSS 
+d) Más Internet 
+Explicación: TypeScript agrega tipos y herramientas de análisis antes de ejecutar. 
+27. ¿Qué método transforma cada elemento y devuelve un nuevo arreglo? 
+a) forEach 
+b) map  ← RESPUESTA CORRECTA 
+c) filter 
+d) reduce 
+Explicación: map aplica una función a cada elemento y construye otro arreglo. 
+28. ¿Qué hace break dentro de un bucle? 
+a) Salta iteración 
+b) Interrumpe el bucle  ← RESPUESTA CORRECTA 
+c) Reinicia 
+d) Detiene SO 
+Explicación: break termina el bucle actual. 
+29. ¿Qué es un ORM? 
+a) Mapeo entre objetos y tablas relacionales  ← RESPUESTA CORRECTA 
+b) Motor de búsqueda 
+c) Lenguaje UI 
+d) Cifrado 
+Explicación: ORM relaciona objetos del código con registros de una base de datos. 
+30. ¿Qué comando trae cambios remotos y los integra en la rama local? 
+a) push 
+b) fetch 
+c) pull  ← RESPUESTA CORRECTA 
+d) commit 
+Explicación: git pull combina descarga e integración de cambios remotos. 
+31. ¿Qué es una variable? 
+a) Espacio nombrado para almacenar un valor  ← RESPUESTA CORRECTA 
+b) Función 
+c) Clase siempre 
+d) Compilador 
+Explicación: Una variable representa un dato que puede cambiar según el lenguaje. 
+32. ¿Qué es una constante? 
+a) Valor que no debe cambiar durante su uso  ← RESPUESTA CORRECTA 
+b) Variable global siempre 
+c) Bucle 
+d) Clase 
+Explicación: Una constante representa un valor no reasignable según el lenguaje. 
+33. ¿Qué estructura ejecuta código según una condición? 
+a) if  ← RESPUESTA CORRECTA 
+b) for 
+c) class 
+d) import 
+Explicación: if permite ejecutar instrucciones cuando una condición se cumple. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+34. ¿Qué estructura permite elegir entre varios casos? 
+a) switch/match  ← RESPUESTA CORRECTA 
+b) while 
+c) return 
+d) new 
+Explicación: switch o match selecciona entre alternativas. 
+35. ¿Qué bucle suele usarse cuando se conoce el número de iteraciones? 
+a) for  ← RESPUESTA CORRECTA 
+b) if 
+c) try 
+d) class 
+Explicación: for es adecuado para iteraciones controladas. 
+36. ¿Qué bucle continúa mientras una condición sea verdadera? 
+a) while  ← RESPUESTA CORRECTA 
+b) switch 
+c) import 
+d) break 
+Explicación: while repite mientras su condición sea verdadera. 
+37. ¿Qué palabra devuelve un valor de una función? 
+a) return  ← RESPUESTA CORRECTA 
+b) break 
+c) continue 
+d) yield-only 
+Explicación: return finaliza la función y puede entregar un valor. 
+38. ¿Qué hace continue? 
+a) Salta a la siguiente iteración  ← RESPUESTA CORRECTA 
+b) Termina el programa 
+c) Crea clase 
+d) Devuelve valor 
+Explicación: continue omite el resto de la iteración actual. 
+39. ¿Qué es un parámetro? 
+a) Dato definido en la firma de una función  ← RESPUESTA CORRECTA 
+b) Resultado siempre 
+c) Clase 
+d) Error 
+Explicación: Un parámetro recibe información al invocar una función. 
+40. ¿Qué es un argumento? 
+a) Valor enviado a un parámetro  ← RESPUESTA CORRECTA 
+b) Nombre de clase 
+c) Bucle 
+d) Excepción 
+Explicación: El argumento es el valor concreto pasado a una función. 
+41. ¿Qué es una función pura? 
+a) Misma salida para misma entrada y sin efectos secundarios  ← RESPUESTA CORRECTA 
+b) Función global 
+c) Función recursiva siempre 
+d) Función sin parámetros 
+Explicación: Una función pura evita modificar estado externo. 
+42. ¿Qué es una interfaz? 
+a) Contrato de operaciones que una clase puede implementar  ← RESPUESTA CORRECTA 
+b) Base de datos 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Variable 
+d) Bucle 
+Explicación: Una interfaz define capacidades o contratos. 
+43. ¿Qué es herencia? 
+a) Una clase deriva características de otra  ← RESPUESTA CORRECTA 
+b) Copia de archivo 
+c) Compilación 
+d) Encapsulamiento 
+Explicación: La herencia permite reutilizar y especializar comportamiento. 
+44. ¿Qué es abstracción? 
+a) Representar lo esencial ocultando detalles innecesarios  ← RESPUESTA CORRECTA 
+b) Copiar objetos 
+c) Crear variables 
+d) Ordenar 
+Explicación: La abstracción simplifica el uso exponiendo lo relevante. 
+45. ¿Qué es composición? 
+a) Construir un objeto usando otros objetos  ← RESPUESTA CORRECTA 
+b) Herencia múltiple obligatoria 
+c) Recursión 
+d) Compilación 
+Explicación: La composición relaciona objetos mediante componentes. 
+46. ¿Qué principio SOLID favorece extensibilidad sin modificar código existente? 
+a) OCP  ← RESPUESTA CORRECTA 
+b) SRP 
+c) LSP 
+d) DIP 
+Explicación: Open/Closed busca abierto a extensión y cerrado a modificación. 
+47. ¿Qué principio SOLID trata sustitución correcta de subtipos? 
+a) LSP  ← RESPUESTA CORRECTA 
+b) OCP 
+c) SRP 
+d) ISP 
+Explicación: Liskov exige que los subtipos sean sustituibles por su base. 
+48. ¿Qué principio evita interfaces demasiado grandes? 
+a) ISP  ← RESPUESTA CORRECTA 
+b) DIP 
+c) LSP 
+d) OCP 
+Explicación: Interface Segregation propone interfaces específicas. 
+49. ¿Qué principio promueve depender de abstracciones? 
+a) DIP  ← RESPUESTA CORRECTA 
+b) SRP 
+c) OCP 
+d) ISP 
+Explicación: Dependency Inversion reduce acoplamiento mediante abstracciones. 
+50. ¿Qué es acoplamiento? 
+a) Grado de dependencia entre módulos  ← RESPUESTA CORRECTA 
+b) Número de variables 
+c) Velocidad 
+d) Cantidad de líneas 
+Explicación: Alto acoplamiento dificulta cambios independientes. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+51. ¿Qué es cohesión? 
+a) Qué tan relacionadas están las responsabilidades de un módulo  ← RESPUESTA CORRECTA 
+b) Número de clases 
+c) Velocidad 
+d) Tamaño de archivo 
+Explicación: Alta cohesión concentra responsabilidades relacionadas. 
+52. ¿Qué es un algoritmo? 
+a) Secuencia finita de pasos para resolver un problema  ← RESPUESTA CORRECTA 
+b) Variable 
+c) Compilador 
+d) Base de datos 
+Explicación: Un algoritmo define pasos para obtener un resultado. 
+53. ¿Qué estructura representa relaciones entre nodos? 
+a) Grafo  ← RESPUESTA CORRECTA 
+b) Pila 
+c) Cola 
+d) Variable 
+Explicación: Un grafo modela nodos y conexiones. 
+54. ¿Qué estructura sigue FIFO? 
+a) Cola  ← RESPUESTA CORRECTA 
+b) Pila 
+c) Árbol 
+d) Hash 
+Explicación: FIFO significa primero en entrar, primero en salir. 
+55. ¿Qué recorrido de árbol visita raíz entre izquierda y derecha? 
+a) Inorden  ← RESPUESTA CORRECTA 
+b) Preorden 
+c) Postorden 
+d) Nivel 
+Explicación: En inorden se visita izquierda, raíz y derecha. 
+56. ¿Qué recorrido visita primero la raíz? 
+a) Preorden  ← RESPUESTA CORRECTA 
+b) Inorden 
+c) Postorden 
+d) Hash 
+Explicación: Preorden visita raíz antes de sus subárboles. 
+57. ¿Qué algoritmo divide y combina para ordenar? 
+a) Merge Sort  ← RESPUESTA CORRECTA 
+b) Bubble 
+c) Linear Search 
+d) DFS 
+Explicación: Merge Sort divide el arreglo y combina partes ordenadas. 
+58. ¿Qué complejidad promedio tiene QuickSort? 
+a) O(n log n)  ← RESPUESTA CORRECTA 
+b) O(1) 
+c) O(n²) siempre 
+d) O(log n) 
+Explicación: Su promedio es O(n log n), aunque el peor caso puede ser O(n²). 
+59. ¿Qué búsqueda revisa elementos uno a uno? 
+a) Lineal  ← RESPUESTA CORRECTA 
+b) Binaria 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Hash obligatoria 
+d) DFS 
+Explicación: La búsqueda lineal recorre secuencialmente. 
+60. ¿Qué requiere la búsqueda binaria? 
+a) Datos ordenados  ← RESPUESTA CORRECTA 
+b) Datos aleatorios 
+c) Base de datos 
+d) Red 
+Explicación: La búsqueda binaria necesita un orden que permita descartar mitades. 
+61. ¿Qué es complejidad espacial? 
+a) Memoria adicional requerida por un algoritmo  ← RESPUESTA CORRECTA 
+b) Tiempo de CPU 
+c) Número de usuarios 
+d) Tamaño de pantalla 
+Explicación: Mide recursos de memoria usados por el algoritmo. 
+62. ¿Qué es una excepción? 
+a) Evento anormal que altera el flujo normal  ← RESPUESTA CORRECTA 
+b) Variable 
+c) Clase base 
+d) Comentario 
+Explicación: Una excepción representa un problema durante ejecución. 
+63. ¿Qué es logging? 
+a) Registro de eventos de una aplicación  ← RESPUESTA CORRECTA 
+b) Compilación 
+c) Encriptación 
+d) Interfaz 
+Explicación: Los logs ayudan a diagnosticar y auditar comportamiento. 
+64. ¿Qué es debugging? 
+a) Proceso de localizar y corregir errores  ← RESPUESTA CORRECTA 
+b) Diseñar BD 
+c) Subir Git 
+d) Instalar RAM 
+Explicación: Depurar consiste en encontrar y solucionar defectos. 
+65. ¿Qué es una prueba unitaria? 
+a) Prueba de una unidad pequeña de código  ← RESPUESTA CORRECTA 
+b) Prueba de red completa 
+c) Backup 
+d) Deploy 
+Explicación: Evalúa una función o componente de forma aislada. 
+66. ¿Qué es integración continua? 
+a) Integrar y validar cambios frecuentemente de forma automatizada  ← RESPUESTA CORRECTA 
+b) Copiar archivos manualmente 
+c) Diseñar logos 
+d) Cambiar RAM 
+Explicación: CI automatiza compilación y pruebas ante cambios. 
+67. ¿Qué es CI/CD? 
+a) Prácticas para integración y entrega/despliegue continuo  ← RESPUESTA CORRECTA 
+b) Lenguaje 
+c) BD 
+d) Protocolo 
+Explicación: CI/CD automatiza etapas desde integración hasta entrega o despliegue. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+68. ¿Qué es una API? 
+a) Interfaz para que software se comunique con otro software  ← RESPUESTA CORRECTA 
+b) Base de datos 
+c) Sistema operativo 
+d) Cable 
+Explicación: Una API define operaciones y formas de interacción. 
+69. ¿Qué método HTTP suele obtener recursos? 
+a) GET  ← RESPUESTA CORRECTA 
+b) POST 
+c) PUT 
+d) DELETE 
+Explicación: GET solicita recursos sin pretender modificarlos. 
+70. ¿Qué método HTTP suele crear/enviar un recurso? 
+a) POST  ← RESPUESTA CORRECTA 
+b) GET 
+c) HEAD 
+d) OPTIONS 
+Explicación: POST se usa comúnmente para enviar datos o crear recursos. 
+71. ¿Qué método HTTP suele reemplazar/actualizar un recurso? 
+a) PUT  ← RESPUESTA CORRECTA 
+b) GET 
+c) TRACE 
+d) CONNECT 
+Explicación: PUT suele representar actualización o reemplazo idempotente. 
+72. ¿Qué método HTTP elimina un recurso? 
+a) DELETE  ← RESPUESTA CORRECTA 
+b) GET 
+c) POST 
+d) HEAD 
+Explicación: DELETE solicita eliminación de un recurso. 
+73. ¿Qué código HTTP indica éxito general? 
+a) 2xx  ← RESPUESTA CORRECTA 
+b) 3xx 
+c) 4xx 
+d) 5xx 
+Explicación: Los códigos 2xx representan respuestas exitosas. 
+74. ¿Qué código HTTP indica recurso no encontrado? 
+a) 404  ← RESPUESTA CORRECTA 
+b) 200 
+c) 301 
+d) 500 
+Explicación: 404 significa que el recurso solicitado no fue encontrado. 
+75. ¿Qué código indica error interno del servidor? 
+a) 500  ← RESPUESTA CORRECTA 
+b) 201 
+c) 302 
+d) 401 
+Explicación: 500 representa un error interno del servidor. 
+76. ¿Qué código suele indicar no autenticado? 
+a) 401  ← RESPUESTA CORRECTA 
+b) 403 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) 404 
+d) 200 
+Explicación: 401 indica que falta autenticación válida. 
+77. ¿Qué código indica acceso prohibido? 
+a) 403  ← RESPUESTA CORRECTA 
+b) 401 
+c) 404 
+d) 301 
+Explicación: 403 indica que el servidor rechaza el acceso solicitado. 
+78. ¿Qué es JSON? 
+a) Formato estructurado de texto para datos  ← RESPUESTA CORRECTA 
+b) Lenguaje de programación 
+c) Base de datos 
+d) Protocolo físico 
+Explicación: JSON representa datos estructurados de forma ligera. 
+79. ¿Qué es serialización? 
+a) Convertir un objeto a un formato almacenable/transmisible  ← RESPUESTA CORRECTA 
+b) Borrar objeto 
+c) Compilar 
+d) Crear red 
+Explicación: Serializar transforma datos a una representación transferible. 
+80. ¿Qué es deserialización? 
+a) Reconstruir datos/objetos desde una representación  ← RESPUESTA CORRECTA 
+b) Eliminar datos 
+c) Crear BD 
+d) Ordenar 
+Explicación: Deserializar interpreta la representación recibida. 
+81. ¿Qué es Git? 
+a) Sistema de control de versiones distribuido  ← RESPUESTA CORRECTA 
+b) Servidor web 
+c) BD 
+d) IDE 
+Explicación: Git registra cambios y permite trabajar con ramas. 
+82. ¿Qué hace git init? 
+a) Inicializa un repositorio Git  ← RESPUESTA CORRECTA 
+b) Sube código 
+c) Descarga ramas 
+d) Elimina commits 
+Explicación: git init crea el repositorio local. 
+83. ¿Qué hace git status? 
+a) Muestra estado de archivos y cambios  ← RESPUESTA CORRECTA 
+b) Publica código 
+c) Crea rama remota 
+d) Borra archivos 
+Explicación: git status muestra modificaciones y estado del área de trabajo. 
+84. ¿Qué hace git add? 
+a) Prepara cambios para commit  ← RESPUESTA CORRECTA 
+b) Publica en remoto 
+c) Elimina rama 
+d) Descarga cambios 
+Explicación: git add lleva cambios al staging area. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+85. ¿Qué hace git commit? 
+a) Registra cambios preparados en el historial  ← RESPUESTA CORRECTA 
+b) Descarga código 
+c) Borra repositorio 
+d) Crea servidor 
+Explicación: commit crea una instantánea del estado preparado. 
+86. ¿Qué hace git push? 
+a) Envía commits al repositorio remoto  ← RESPUESTA CORRECTA 
+b) Descarga cambios 
+c) Crea una clase 
+d) Compila 
+Explicación: push publica commits en un remoto. 
+87. ¿Qué hace git fetch? 
+a) Descarga referencias/cambios remotos sin integrar automáticamente  ← RESPUESTA CORRECTA 
+b) Borra remoto 
+c) Publica 
+d) Crea commit 
+Explicación: fetch actualiza referencias remotas sin modificar la rama de trabajo. 
+88. ¿Qué es un merge? 
+a) Integrar cambios de una rama en otra  ← RESPUESTA CORRECTA 
+b) Borrar historial 
+c) Crear BD 
+d) Comprimir código 
+Explicación: merge combina historiales de ramas. 
+89. ¿Qué es un conflicto Git? 
+a) Cambios incompatibles que requieren resolución manual  ← RESPUESTA CORRECTA 
+b) Error de Internet siempre 
+c) Virus 
+d) Backup 
+Explicación: Git necesita intervención cuando no puede combinar cambios automáticamente. 
+90. ¿Qué es una variable local? 
+a) Variable cuyo alcance está limitado a un bloque o función  ← RESPUESTA CORRECTA 
+b) Variable global siempre 
+c) Constante 
+d) Clase 
+Explicación: Su visibilidad depende del ámbito donde se declara. 
+91. ¿Qué es tipado estático? 
+a) Tipos comprobados principalmente antes de ejecución  ← RESPUESTA CORRECTA 
+b) Sin tipos 
+c) Tipos solo en UI 
+d) Tipos al azar 
+Explicación: El compilador o analizador verifica tipos antes de ejecutar. 
+92. ¿Qué es tipado dinámico? 
+a) Los tipos se determinan durante ejecución  ← RESPUESTA CORRECTA 
+b) Sin tipos 
+c) Solo enteros 
+d) Solo Java 
+Explicación: En lenguajes dinámicos el tipo se asocia al valor durante ejecución. 
+93. ¿Qué es compilación? 
+a) Transformar código fuente a una forma ejecutable o intermedia  ← RESPUESTA CORRECTA 
+b) Ejecutar SQL 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Diseñar UI 
+d) Crear red 
+Explicación: Un compilador traduce el código según el lenguaje y plataforma. 
+94. ¿Qué es interpretación? 
+a) Ejecutar código mediante un intérprete en tiempo de ejecución  ← RESPUESTA CORRECTA 
+b) Crear una BD 
+c) Instalar hardware 
+d) Subir Git 
+Explicación: El intérprete ejecuta instrucciones según el entorno. 
+95. ¿Qué es un IDE? 
+a) Entorno integrado de desarrollo  ← RESPUESTA CORRECTA 
+b) Protocolo 
+c) Base de datos 
+d) Cable 
+Explicación: Un IDE reúne editor, herramientas y depuración. 
+96. ¿Qué es refactorización? 
+a) Mejorar estructura interna sin cambiar comportamiento esperado  ← RESPUESTA CORRECTA 
+b) Añadir hardware 
+c) Borrar código siempre 
+d) Cambiar requisitos 
+Explicación: Refactorizar mejora diseño interno manteniendo comportamiento. 
+97. ¿Qué es deuda técnica? 
+a) Costo futuro generado por decisiones técnicas que requieren trabajo posterior  ← RESPUESTA 
+CORRECTA 
+b) Deuda bancaria 
+c) Error de red 
+d) Backup 
+Explicación: La deuda técnica representa trabajo futuro derivado de atajos o decisiones. 
+98. ¿Qué es documentación de código? 
+a) Información que explica uso, diseño o comportamiento del software  ← RESPUESTA CORRECTA 
+b) Código compilado 
+c) Base de datos 
+d) Driver 
+Explicación: La documentación facilita mantenimiento y comprensión. 
+99. ¿Qué es control de versiones? 
+a) Sistema para registrar y gestionar cambios en archivos  ← RESPUESTA CORRECTA 
+b) Control de RAM 
+c) Antivirus 
+d) Servidor DNS 
+Explicación: Permite historial, comparación y colaboración. 
+100. ¿Qué es una dependencia? 
+a) Componente externo requerido por el software  ← RESPUESTA CORRECTA 
+b) Variable local 
+c) Bucle 
+d) Comentario 
+Explicación: Una dependencia es algo que el proyecto necesita para funcionar. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+ÁREA 4: SOPORTE TÉCNICO 
+100 preguntas de opción múltiple. Las preguntas 1–30 corresponden al cuestionario base; las preguntas 31–100 son 
+ampliaciones de práctica. 
+1. ¿Qué componente ejecuta instrucciones y procesa datos? 
+a) RAM 
+b) CPU  ← RESPUESTA CORRECTA 
+c) Disco 
+d) Fuente 
+Explicación: La CPU ejecuta instrucciones y realiza operaciones. 
+2. ¿Qué memoria es volátil? 
+a) ROM 
+b) RAM  ← RESPUESTA CORRECTA 
+c) NVMe 
+d) Flash BIOS 
+Explicación: La RAM pierde su contenido al apagar el equipo. 
+3. ¿Qué sistema de archivos es predeterminado en instalaciones modernas de Windows? 
+a) FAT32 
+b) exFAT 
+c) NTFS  ← RESPUESTA CORRECTA 
+d) EXT4 
+Explicación: Windows utiliza NTFS como sistema de archivos principal. 
+4. ¿Qué realiza el POST durante el arranque? 
+a) Carga apps 
+b) Comprueba hardware básico mediante BIOS/UEFI  ← RESPUESTA CORRECTA 
+c) Instala drivers 
+d) Formatea 
+Explicación: POST verifica componentes esenciales antes de cargar el sistema. 
+5. ¿Qué comando comprueba archivos de sistema dañados en Windows? 
+a) chkdsk /f 
+b) sfc /scannow  ← RESPUESTA CORRECTA 
+c) diskpart 
+d) format 
+Explicación: SFC analiza y repara archivos protegidos del sistema. 
+6. ¿Qué se aplica entre CPU y disipador para mejorar transferencia térmica? 
+a) Cinta 
+b) Pasta térmica  ← RESPUESTA CORRECTA 
+c) Alcohol 
+d) Pad común 
+Explicación: La pasta térmica rellena microespacios entre superficies. 
+7. ¿Qué unidad mide frecuencia de CPU? 
+a) GB 
+b) GHz  ← RESPUESTA CORRECTA 
+c) W 
+d) RPM 
+Explicación: La frecuencia del procesador se expresa habitualmente en GHz. 
+8. ¿Qué puede provocar una BSOD? 
+a) Fallo crítico de sistema, hardware o drivers  ← RESPUESTA CORRECTA 
+b) Papelera llena 
+c) Cable de red 
+d) Monitor 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+Explicación: Una BSOD puede relacionarse con errores graves de software, controladores o hardware. 
+9. ¿Qué almacenamiento se conecta directamente al bus PCIe y suele ofrecer alta velocidad? 
+a) HDD SATA 
+b) SSD SATA 
+c) SSD M.2 NVMe  ← RESPUESTA CORRECTA 
+d) SSHD 
+Explicación: NVMe usa PCIe y reduce latencias frente a SATA. 
+10. ¿Qué mantenimiento se planifica para prevenir fallos? 
+a) Correctivo 
+b) Preventivo  ← RESPUESTA CORRECTA 
+c) Adaptativo 
+d) Emergencia 
+Explicación: El preventivo busca reducir la probabilidad de fallas. 
+11. ¿Qué protocolo permite administración y monitoreo de equipos de red? 
+a) SNMP  ← RESPUESTA CORRECTA 
+b) SMTP 
+c) FTP 
+d) ICMP 
+Explicación: SNMP recopila y administra información de dispositivos de red. 
+12. ¿Qué herramienta de Windows gestiona procesos y rendimiento? 
+a) Administrador de dispositivos 
+b) Administrador de tareas  ← RESPUESTA CORRECTA 
+c) Visor de eventos 
+d) Regedit 
+Explicación: El Administrador de tareas permite ver procesos, CPU, RAM y finalizar tareas. 
+13. ¿Qué dispositivo entrega energía mediante batería durante un corte? 
+a) AVR 
+b) UPS  ← RESPUESTA CORRECTA 
+c) Supresor 
+d) Transformador 
+Explicación: Una UPS mantiene temporalmente el suministro eléctrico. 
+14. Pitidos al encender sin video suelen relacionarse con: 
+a) Disco 
+b) RAM o GPU  ← RESPUESTA CORRECTA 
+c) Teclado 
+d) Impresora 
+Explicación: Los códigos acústicos pueden indicar fallas de hardware, según fabricante. 
+15. ¿Qué líquido se usa comúnmente para limpiar componentes electrónicos? 
+a) Agua 
+b) Alcohol isopropílico  ← RESPUESTA CORRECTA 
+c) Limpiavidrios 
+d) Detergente 
+Explicación: El alcohol isopropílico adecuado evapora rápido y deja poca humedad. 
+16. ¿Qué hace RAID 1? 
+a) Suma capacidades 
+b) Espeja datos  ← RESPUESTA CORRECTA 
+c) Divide datos para velocidad 
+d) Copia en nube 
+Explicación: RAID 1 mantiene una copia espejo en otro disco. 
+17. ¿Qué conector transmite video y audio digital? 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) HDMI  ← RESPUESTA CORRECTA 
+a) VGA 
+b) DVI-D 
+d) Jack 3.5 
+Explicación: HDMI transporta audio y video digital por un mismo enlace. 
+18. ¿Qué hace chkdsk C: /f /r? 
+a) Formatea 
+b) Repara estructura y busca sectores defectuosos  ← RESPUESTA CORRECTA 
+c) Desinstala 
+d) Desfragmenta RAM 
+Explicación: /f corrige errores lógicos y /r busca sectores defectuosos recuperables. 
+19. ¿Qué conector principal de 24 pines alimenta la placa base? 
+a) PCIe 
+b) ATX 24 pines  ← RESPUESTA CORRECTA 
+c) Molex 
+d) SATA power 
+Explicación: El ATX de 24 pines suministra alimentación principal a la placa. 
+20. ¿Qué seguridad Wi-Fi actual ofrece protección superior frente a WEP? 
+a) WEP 
+b) WPA 
+c) WPA2/WPA3  ← RESPUESTA CORRECTA 
+d) TKIP 
+Explicación: WPA2 y especialmente WPA3 proporcionan mecanismos de seguridad modernos. 
+21. ¿Qué es un driver? 
+a) Programa que permite al SO comunicarse con hardware  ← RESPUESTA CORRECTA 
+b) Chip 
+c) Virus 
+d) Cable 
+Explicación: El controlador traduce instrucciones del sistema operativo para el dispositivo. 
+22. ¿Para qué sirve particionar un disco? 
+a) Duplicar RAM 
+b) Dividir lógicamente una unidad  ← RESPUESTA CORRECTA 
+c) Aumentar RPM 
+d) Evitar virus 
+Explicación: Una partición crea una sección lógica independiente dentro de un disco. 
+23. ¿Qué permite restaurar configuración a un estado anterior? 
+a) Formateo 
+b) Punto de restauración  ← RESPUESTA CORRECTA 
+c) Defrag 
+d) Windows Update 
+Explicación: La Restauración del sistema revierte configuraciones y archivos del sistema. 
+24. ¿Qué comando muestra conexiones TCP y puertos? 
+a) ipconfig 
+b) netstat  ← RESPUESTA CORRECTA 
+c) route print 
+d) hostname 
+Explicación: netstat muestra conexiones y puertos según sus opciones. 
+25. ¿Qué evita descargas electrostáticas al manipular componentes? 
+a) Guantes de lana 
+b) Pulsera antiestática conectada a tierra  ← RESPUESTA CORRECTA 
+c) Alfombra 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+d) Manos húmedas 
+Explicación: La pulsera ESD ayuda a descargar electricidad estática de forma controlada. 
+26. ¿Qué función cumple una CR2032 en la placa madre? 
+a) Alimenta CPU 
+b) Mantiene reloj y configuración CMOS  ← RESPUESTA CORRECTA 
+c) Enfría chipset 
+d) Aumenta FPS 
+Explicación: La batería mantiene el reloj y ciertos parámetros cuando el equipo está apagado. 
+27. ¿Qué malware cifra archivos y exige rescate? 
+a) Spyware 
+b) Ransomware  ← RESPUESTA CORRECTA 
+c) Adware 
+d) Rootkit 
+Explicación: El ransomware cifra o bloquea datos y exige un pago. 
+28. ¿Qué firmware moderno reemplaza a la BIOS tradicional? 
+a) MBR 
+b) UEFI  ← RESPUESTA CORRECTA 
+c) CMOS 
+d) NVRAM 
+Explicación: UEFI ofrece un firmware moderno con funciones como Secure Boot. 
+29. ¿Qué herramienta coloca RJ45 en cable UTP? 
+a) Crimpadora  ← RESPUESTA CORRECTA 
+b) Pelacables 
+c) Cautín 
+d) Multímetro 
+Explicación: La crimpadora fija los contactos del conector RJ45. 
+30. ¿Qué comando Linux muestra uso de espacio de disco en formato legible? 
+a) free -h 
+b) df -h  ← RESPUESTA CORRECTA 
+c) top 
+d) ls aux 
+Explicación: df -h muestra espacio usado y disponible de sistemas de archivos. 
+31. ¿Qué componente almacena datos de forma persistente? 
+a) RAM 
+b) SSD/HDD  ← RESPUESTA CORRECTA 
+c) CPU 
+d) Fuente 
+Explicación: SSD y HDD mantienen datos sin energía. 
+32. ¿Qué componente proporciona energía a la PC? 
+a) PSU/Fuente  ← RESPUESTA CORRECTA 
+b) RAM 
+c) CPU 
+d) NIC 
+Explicación: La fuente convierte y distribuye energía eléctrica. 
+33. ¿Qué componente conecta CPU, RAM y dispositivos? 
+a) Placa madre  ← RESPUESTA CORRECTA 
+b) Monitor 
+c) Teclado 
+d) UPS 
+Explicación: La placa madre interconecta los componentes. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+34. ¿Qué memoria suele ser más rápida y cercana a la CPU? 
+a) Caché  ← RESPUESTA CORRECTA 
+b) HDD 
+c) USB 
+d) DVD 
+Explicación: La caché de CPU tiene muy baja latencia. 
+35. ¿Qué unidad mide capacidad de almacenamiento? 
+a) GB/TB  ← RESPUESTA CORRECTA 
+b) GHz 
+c) Voltios 
+d) RPM 
+Explicación: GB y TB son unidades de capacidad digital. 
+36. ¿Qué unidad mide potencia eléctrica? 
+a) Watt  ← RESPUESTA CORRECTA 
+b) GB 
+c) GHz 
+d) Ohm 
+Explicación: La potencia se mide en vatios (W). 
+37. ¿Qué unidad mide tensión eléctrica? 
+a) Voltio  ← RESPUESTA CORRECTA 
+b) Watt 
+c) GB 
+d) RPM 
+Explicación: El voltio mide diferencia de potencial. 
+38. ¿Qué unidad mide corriente? 
+a) Amperio  ← RESPUESTA CORRECTA 
+b) Voltio 
+c) Watt 
+d) Hz 
+Explicación: El amperio mide corriente eléctrica. 
+39. ¿Qué función cumple un disipador? 
+a) Transferir calor desde un componente  ← RESPUESTA CORRECTA 
+b) Almacenar archivos 
+c) Aumentar RAM 
+d) Proteger de virus 
+Explicación: El disipador ayuda a evacuar calor. 
+40. ¿Qué hace un ventilador de PC? 
+a) Mueve aire para favorecer refrigeración  ← RESPUESTA CORRECTA 
+b) Almacena datos 
+c) Aumenta voltaje 
+d) Instala drivers 
+Explicación: El ventilador mejora el flujo de aire. 
+41. ¿Qué puede causar sobrecalentamiento? 
+a) Mala ventilación o polvo  ← RESPUESTA CORRECTA 
+b) Más espacio de disco 
+c) Cable HDMI 
+d) Fondo de pantalla 
+Explicación: Polvo y flujo de aire insuficiente elevan temperaturas. 
+42. ¿Qué herramienta mide voltaje y continuidad? 
+a) Multímetro  ← RESPUESTA CORRECTA 
+b) Crimpadora 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Destornillador 
+d) Pistola térmica 
+Explicación: El multímetro mide variables eléctricas. 
+43. ¿Qué herramienta se usa para apretar tornillos de PC? 
+a) Destornillador  ← RESPUESTA CORRECTA 
+b) Multímetro 
+c) Crimpadora 
+d) Pelacables 
+Explicación: El destornillador permite fijar componentes. 
+44. ¿Qué precaución se recomienda antes de abrir una PC? 
+a) Desconectar energía y descargar estática  ← RESPUESTA CORRECTA 
+b) Encenderla 
+c) Mojar componentes 
+d) Usar metal sin cuidado 
+Explicación: La seguridad eléctrica y ESD reduce riesgos. 
+45. ¿Qué es ESD? 
+a) Descarga electrostática  ← RESPUESTA CORRECTA 
+b) Disco externo 
+c) Sistema de archivos 
+d) Protocolo 
+Explicación: ESD significa Electrostatic Discharge. 
+46. ¿Qué componente almacena firmware de arranque? 
+a) Chip de firmware/flash  ← RESPUESTA CORRECTA 
+b) RAM 
+c) HDD 
+d) GPU 
+Explicación: BIOS/UEFI se almacena en memoria flash de la placa. 
+47. ¿Qué significa BIOS? 
+a) Basic Input/Output System  ← RESPUESTA CORRECTA 
+b) Binary Internet Operating Service 
+c) Boot Internal OS 
+d) Basic Integrated Online System 
+Explicación: BIOS es el firmware tradicional de inicialización. 
+48. ¿Qué significa UEFI? 
+a) Unified Extensible Firmware Interface  ← RESPUESTA CORRECTA 
+b) Universal Ethernet File Interface 
+c) User External Firmware Input 
+d) Unified Engine File Index 
+Explicación: UEFI es la interfaz de firmware moderna. 
+49. ¿Qué es Secure Boot? 
+a) Mecanismo que verifica software de arranque autorizado  ← RESPUESTA CORRECTA 
+b) Antivirus de navegador 
+c) Backup 
+d) Firewall 
+Explicación: Secure Boot ayuda a impedir cargas de arranque no autorizadas. 
+50. ¿Qué tabla de particiones moderna se usa con UEFI? 
+a) GPT  ← RESPUESTA CORRECTA 
+b) FAT32 
+c) NTFS 
+d) EXT2 
+Explicación: GPT es el esquema de particiones moderno usado con UEFI. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+51. ¿Qué limitación histórica tiene MBR? 
+a) Soporta menos particiones/capacidad que GPT  ← RESPUESTA CORRECTA 
+b) No funciona con HDD 
+c) No almacena datos 
+d) Solo sirve para Linux 
+Explicación: MBR tiene limitaciones de tamaño y particiones frente a GPT. 
+52. ¿Qué es un SSD? 
+a) Unidad de estado sólido  ← RESPUESTA CORRECTA 
+b) Servidor seguro 
+c) Sistema de sonido 
+d) Switch 
+Explicación: SSD usa memoria flash y no tiene partes mecánicas como HDD. 
+53. ¿Qué ventaja tiene SSD sobre HDD? 
+a) Menor latencia y mayor velocidad en general  ← RESPUESTA CORRECTA 
+b) Más partes móviles 
+c) Más ruido 
+d) Menor resistencia a golpes siempre 
+Explicación: Los SSD suelen ofrecer acceso más rápido y silencioso. 
+54. ¿Qué es SMART? 
+a) Tecnología de monitoreo de salud de almacenamiento  ← RESPUESTA CORRECTA 
+b) Antivirus 
+c) Red Wi-Fi 
+d) Memoria 
+Explicación: SMART registra indicadores de estado de unidades. 
+55. ¿Qué indica una temperatura excesiva de CPU? 
+a) Riesgo de reducción de rendimiento o apagado  ← RESPUESTA CORRECTA 
+b) Más almacenamiento 
+c) Mejor Wi-Fi 
+d) Más RAM 
+Explicación: El sistema puede reducir frecuencia o apagarse para protegerse. 
+56. ¿Qué es thermal throttling? 
+a) Reducción de rendimiento para controlar temperatura  ← RESPUESTA CORRECTA 
+b) Fallo de red 
+c) Backup 
+d) Virus 
+Explicación: El procesador reduce frecuencia al alcanzar límites térmicos. 
+57. ¿Qué herramienta Windows muestra hardware y drivers? 
+a) Administrador de dispositivos  ← RESPUESTA CORRECTA 
+b) Paint 
+c) Bloc de notas 
+d) Calculadora 
+Explicación: Device Manager lista dispositivos y controladores. 
+58. ¿Qué herramienta registra eventos del sistema Windows? 
+a) Visor de eventos  ← RESPUESTA CORRECTA 
+b) Paint 
+c) Explorer 
+d) WordPad 
+Explicación: Event Viewer muestra registros de sistema y aplicaciones. 
+59. ¿Qué comando Windows comprueba conectividad IP? 
+a) ping  ← RESPUESTA CORRECTA 
+b) format 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) copy 
+d) del 
+Explicación: ping verifica conectividad con ICMP. 
+60. ¿Qué comando Windows muestra IP? 
+a) ipconfig  ← RESPUESTA CORRECTA 
+b) tasklist 
+c) sfc 
+d) diskpart 
+Explicación: ipconfig muestra configuración de red. 
+61. ¿Qué comando muestra procesos en Windows? 
+a) tasklist  ← RESPUESTA CORRECTA 
+b) ipconfig 
+c) format 
+d) route 
+Explicación: tasklist lista procesos en ejecución. 
+62. ¿Qué comando Linux muestra procesos en tiempo real? 
+a) top  ← RESPUESTA CORRECTA 
+b) df 
+c) pwd 
+d) mkdir 
+Explicación: top muestra procesos y consumo de recursos. 
+63. ¿Qué comando Linux muestra espacio de disco? 
+a) df -h  ← RESPUESTA CORRECTA 
+b) free -h 
+c) top 
+d) ls 
+Explicación: df -h muestra espacio de sistemas de archivos. 
+64. ¿Qué comando Linux muestra memoria RAM? 
+a) free -h  ← RESPUESTA CORRECTA 
+b) df -h 
+c) ip a 
+d) chmod 
+Explicación: free muestra memoria disponible y utilizada. 
+65. ¿Qué comando Linux muestra interfaces de red? 
+a) ip a  ← RESPUESTA CORRECTA 
+b) df 
+c) top 
+d) grep 
+Explicación: ip a muestra interfaces y direcciones. 
+66. ¿Qué comando Linux cambia permisos? 
+a) chmod  ← RESPUESTA CORRECTA 
+b) chown 
+c) mkdir 
+d) pwd 
+Explicación: chmod modifica permisos de archivos. 
+67. ¿Qué comando Linux cambia propietario? 
+a) chown  ← RESPUESTA CORRECTA 
+b) chmod 
+c) mv 
+d) cat 
+Explicación: chown cambia propietario y/o grupo. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+68. ¿Qué significa backup? 
+a) Copia de seguridad  ← RESPUESTA CORRECTA 
+b) Driver 
+c) Virus 
+d) Partición 
+Explicación: Un backup permite recuperar información ante pérdida. 
+69. ¿Qué es restauración de backup? 
+a) Recuperar datos desde una copia  ← RESPUESTA CORRECTA 
+b) Crear contraseña 
+c) Actualizar driver 
+d) Formatear siempre 
+Explicación: Restaurar devuelve datos respaldados al sistema. 
+70. ¿Qué regla de backup se conoce como 3-2-1? 
+a) 3 copias, 2 medios, 1 fuera del sitio  ← RESPUESTA CORRECTA 
+b) 3 discos iguales 
+c) 2 copias y 1 usuario 
+d) 3 servidores solamente 
+Explicación: La regla 3-2-1 diversifica copias y ubicación. 
+71. ¿Qué es malware? 
+a) Software malicioso  ← RESPUESTA CORRECTA 
+b) Hardware 
+c) Driver oficial 
+d) Backup 
+Explicación: Malware es software diseñado para causar daño o realizar acciones no autorizadas. 
+72. ¿Qué hace un antivirus? 
+a) Detecta y ayuda a bloquear software malicioso  ← RESPUESTA CORRECTA 
+b) Aumenta RAM 
+c) Repara monitor 
+d) Configura BIOS 
+Explicación: El antivirus analiza amenazas conocidas y comportamientos sospechosos. 
+73. ¿Qué es phishing? 
+a) Engaño para obtener información mediante mensajes o sitios falsos  ← RESPUESTA CORRECTA 
+b) Virus de hardware 
+c) Backup 
+d) Protocolo 
+Explicación: Phishing usa ingeniería social para robar información. 
+74. ¿Qué es autenticación? 
+a) Verificar identidad  ← RESPUESTA CORRECTA 
+b) Asignar permisos 
+c) Cifrar disco siempre 
+d) Crear usuario 
+Explicación: Autenticación comprueba quién es el usuario. 
+75. ¿Qué es autorización? 
+a) Determinar qué puede hacer un usuario  ← RESPUESTA CORRECTA 
+b) Verificar identidad 
+c) Instalar drivers 
+d) Comprimir 
+Explicación: Autorización controla permisos después de autenticar. 
+76. ¿Qué es MFA? 
+a) Autenticación con múltiples factores  ← RESPUESTA CORRECTA 
+b) Formato de disco 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Antivirus 
+d) Memoria 
+Explicación: MFA combina dos o más factores de autenticación. 
+77. ¿Qué es una contraseña robusta? 
+a) Larga, única y difícil de adivinar  ← RESPUESTA CORRECTA 
+b) 123456 
+c) Nombre propio 
+d) La misma en todo 
+Explicación: Longitud y unicidad mejoran la seguridad. 
+78. ¿Qué es un gestor de contraseñas? 
+a) Herramienta para almacenar y generar credenciales de forma segura  ← RESPUESTA CORRECTA 
+b) Antivirus 
+c) Switch 
+d) Driver 
+Explicación: Ayuda a usar contraseñas únicas sin memorizarlas todas. 
+79. ¿Qué es cifrado? 
+a) Transformar datos para que solo quien tenga la clave pueda interpretarlos  ← RESPUESTA CORRECTA 
+b) Borrar datos 
+c) Formatear 
+d) Comprimir siempre 
+Explicación: El cifrado protege confidencialidad mediante algoritmos y claves. 
+80. ¿Qué es un firewall de host? 
+a) Firewall instalado en un equipo  ← RESPUESTA CORRECTA 
+b) Cable 
+c) Router únicamente 
+d) SSD 
+Explicación: Controla conexiones de red desde el propio equipo. 
+81. ¿Qué es una actualización de seguridad? 
+a) Corrección que reduce vulnerabilidades  ← RESPUESTA CORRECTA 
+b) Cambio de fondo 
+c) Backup 
+d) Más RAM 
+Explicación: Las actualizaciones pueden corregir vulnerabilidades conocidas. 
+82. ¿Qué es un parche? 
+a) Actualización que corrige problemas o vulnerabilidades  ← RESPUESTA CORRECTA 
+b) Disco 
+c) Cable 
+d) Usuario 
+Explicación: Un parche modifica software para solucionar defectos. 
+83. ¿Qué es mantenimiento correctivo? 
+a) Reparación después de detectar una falla  ← RESPUESTA CORRECTA 
+b) Limpieza programada 
+c) Backup 
+d) Actualización preventiva 
+Explicación: Correctivo actúa ante una avería existente. 
+84. ¿Qué es mantenimiento predictivo? 
+a) Usar indicadores para anticipar fallos  ← RESPUESTA CORRECTA 
+b) Reparar después 
+c) Formatear 
+d) Instalar juegos 
+Explicación: Analiza señales para prever necesidades de mantenimiento. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+85. ¿Qué es inventario de hardware? 
+a) Registro de equipos y componentes  ← RESPUESTA CORRECTA 
+b) Backup 
+c) Driver 
+d) Firewall 
+Explicación: Permite controlar activos tecnológicos. 
+86. ¿Qué es una mesa de ayuda? 
+a) Servicio para recibir, gestionar y resolver incidentes  ← RESPUESTA CORRECTA 
+b) Servidor DNS 
+c) Antivirus 
+d) Fuente 
+Explicación: Help desk centraliza solicitudes y soporte. 
+87. ¿Qué es un ticket? 
+a) Registro de una solicitud o incidente de soporte  ← RESPUESTA CORRECTA 
+b) Cable 
+c) Driver 
+d) Backup 
+Explicación: Un ticket documenta y permite dar seguimiento al caso. 
+88. ¿Qué es SLA? 
+a) Acuerdo de nivel de servicio  ← RESPUESTA CORRECTA 
+b) Sistema de archivos 
+c) Antivirus 
+d) Cable 
+Explicación: SLA define niveles y tiempos de servicio acordados. 
+89. ¿Qué es diagnóstico técnico? 
+a) Proceso de identificar la causa de una falla  ← RESPUESTA CORRECTA 
+b) Instalar Windows siempre 
+c) Cambiar todo 
+d) Comprar hardware 
+Explicación: Diagnosticar busca aislar la causa antes de reparar. 
+90. ¿Qué principio ayuda a diagnosticar por etapas? 
+a) Aislar variables  ← RESPUESTA CORRECTA 
+b) Cambiar todo a la vez 
+c) Ignorar síntomas 
+d) Formatear siempre 
+Explicación: Aislar variables permite identificar qué componente causa el problema. 
+91. ¿Qué hacer primero ante un equipo que no enciende? 
+a) Verificar alimentación y conexiones básicas  ← RESPUESTA CORRECTA 
+b) Formatear 
+c) Cambiar RAM sin probar 
+d) Instalar drivers 
+Explicación: Se comienza por causas simples y seguras. 
+92. ¿Qué hacer ante un equipo lento? 
+a) Revisar recursos, procesos, almacenamiento y temperatura  ← RESPUESTA CORRECTA 
+b) Formatear inmediatamente 
+c) Cambiar monitor 
+d) Desconectar red 
+Explicación: El diagnóstico debe revisar causas de software y hardware. 
+93. ¿Qué indica poco espacio en disco? 
+a) Puede afectar actualizaciones y rendimiento  ← RESPUESTA CORRECTA 
+b) Más RAM 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
+c) Mejor CPU 
+d) Más Wi-Fi 
+Explicación: El almacenamiento muy lleno puede generar problemas operativos. 
+94. ¿Qué herramienta muestra uso de CPU y RAM en Windows? 
+a) Administrador de tareas  ← RESPUESTA CORRECTA 
+b) Paint 
+c) Notepad 
+d) Regedit únicamente 
+Explicación: Task Manager muestra consumo de recursos. 
+95. ¿Qué es una imagen de sistema? 
+a) Copia del estado de un sistema para recuperación  ← RESPUESTA CORRECTA 
+b) Foto de pantalla 
+c) Wallpaper 
+d) Driver 
+Explicación: Una imagen puede restaurar sistema, aplicaciones y datos según su alcance. 
+96. ¿Qué es modo seguro? 
+a) Arranque con componentes y servicios mínimos  ← RESPUESTA CORRECTA 
+b) Modo de alto rendimiento 
+c) Backup 
+d) BIOS 
+Explicación: Safe Mode facilita diagnóstico al reducir software cargado. 
+97. ¿Qué es restauración del sistema? 
+a) Volver configuraciones del sistema a un punto anterior  ← RESPUESTA CORRECTA 
+b) Borrar documentos siempre 
+c) Actualizar BIOS 
+d) Cambiar disco 
+Explicación: System Restore revierte cambios del sistema sin ser un backup completo. 
+98. ¿Qué es formatear? 
+a) Preparar una partición con un sistema de archivos, normalmente eliminando su contenido  ← RESPUESTA 
+CORRECTA 
+b) Actualizar RAM 
+c) Cambiar CPU 
+d) Crear red 
+Explicación: El formateo prepara el sistema de archivos y puede borrar datos. 
+99. ¿Qué es una instalación limpia? 
+a) Instalar un sistema operativo desde cero sobre una instalación anterior  ← RESPUESTA CORRECTA 
+b) Actualizar un driver 
+c) Copiar fotos 
+d) Crear usuario 
+Explicación: Una instalación limpia parte de un entorno nuevo. 
+100. ¿Qué es clonación de disco? 
+a) Copiar el contenido de una unidad a otra  ← RESPUESTA CORRECTA 
+b) Comprimir archivo 
+c) Crear contraseña 
+d) Limpiar polvo 
+Explicación: La clonación replica estructura y datos de una unidad. 
+Banco de preguntas – Desarrollo de Software | 400 preguntas 
